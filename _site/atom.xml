@@ -4,13 +4,22 @@
  <title>Tom Preston-Werner</title>
  <link href="http://tom.preston-werner.com/atom.xml" rel="self"/>
  <link href="http://tom.preston-werner.com/"/>
- <updated>2014-07-06T22:37:29+08:00</updated>
+ <updated>2014-07-12T22:07:55+08:00</updated>
  <id>http://tom.preston-werner.com/</id>
  <author>
    <name>Tom Preston-Werner</name>
    <email>tom@mojombo.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Cooking</title>
+   <link href="http://tom.preston-werner.com/2014/07/06/cooking.html"/>
+   <updated>2014-07-06T00:00:00+08:00</updated>
+   <id>http://tom.preston-werner.com/2014/07/06/cooking</id>
+   <content type="html">
+</content>
+ </entry>
  
  <entry>
    <title>Back to Github!</title>
@@ -31,17 +40,6 @@
    <content type="html">　　&lt;h2&gt;hello world!&lt;/h2&gt;
 　　&lt;p&gt;我的第一篇文章&lt;/p&gt;
 　　&lt;p&gt;20 May 2014&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>hello world!</title>
-   <link href="http://tom.preston-werner.com/2014/05/18/helloworld.html"/>
-   <updated>2014-05-18T00:00:00+08:00</updated>
-   <id>http://tom.preston-werner.com/2014/05/18/helloworld</id>
-   <content type="html">　　&lt;h2&gt;hello world!&lt;/h2&gt;
-　　&lt;p&gt;我的第一篇文章&lt;/p&gt;
-　　&lt;p&gt;18 May 2014&lt;/p&gt;
 </content>
  </entry>
  

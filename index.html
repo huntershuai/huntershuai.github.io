@@ -1,13 +1,12 @@
 ---
 layout: defaultTpw
-title: 我的Blog
----
+title: Blog Posts
 　　<h2>{{ page.title }}</h2>
 　　<p>最新文章
 　	　<div>
 		<ul>
 			{% for post in site.posts %}
-			 <li>{{ post.date | date_to_string }} 
+			<li><span>{{ post.date | date_to_string }}</span> &raquo;
 				 <a href="{{ post.url }}">{{ post.title }}</a>
 			 </li>
 		    {% endfor %}
