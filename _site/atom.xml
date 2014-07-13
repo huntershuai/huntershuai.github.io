@@ -4,22 +4,13 @@
  <title>Tom Preston-Werner</title>
  <link href="http://tom.preston-werner.com/atom.xml" rel="self"/>
  <link href="http://tom.preston-werner.com/"/>
- <updated>2014-07-13T11:20:17+08:00</updated>
+ <updated>2014-07-13T22:50:23+08:00</updated>
  <id>http://tom.preston-werner.com/</id>
  <author>
    <name>Tom Preston-Werner</name>
    <email>tom@mojombo.com</email>
  </author>
 
- 
- <entry>
-   <title>Cooking</title>
-   <link href="http://tom.preston-werner.com/2014/07/06/cooking.html"/>
-   <updated>2014-07-06T00:00:00+08:00</updated>
-   <id>http://tom.preston-werner.com/2014/07/06/cooking</id>
-   <content type="html">
-</content>
- </entry>
  
  <entry>
    <title>Back to Github!</title>
