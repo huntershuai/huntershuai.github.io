@@ -6,10 +6,10 @@
 　　　<title>{{ page.title }}</title>
 　　</head>
 　　<body>
-		<p id="posts">
+		<div id="posts">
 		　　　{{ content }}
-		<p>
-		<p id="related">
+		<div>
+		<div id="related">
 			<h2>Related Posts</h2>
 			<ul class="posts">
 				{% for post in site.related_posts limit:3 %}
@@ -21,7 +21,7 @@
 				</li>
 				{% endfor %}
 			</ul>
-		</p>	
+		</div>	
 　　</body>
 　　</html>
 
