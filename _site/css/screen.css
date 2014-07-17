@@ -148,13 +148,19 @@ ul.posts {
 /*
 /*****************************************************************************/
 
-#post {
+#post, #related {
 
+	text-align: justify;
+	font-size: 110%;
+	width: 40em;
+	margin: 3em auto 2em auto;
+	line-height: 1.5em;
 }
 #page_head title{
 	font-size: 200%;
 	font-family: Georgia,serif;
-	text-align: left;
+	text-align: justify;
+	font-size: 110%;
 }	
   /* standard */
 
