@@ -148,7 +148,7 @@ ul.posts {
 /*
 /*****************************************************************************/
 
-#post, #related {
+#post #related {
 
 	text-align: center;
 	font-size: 110%;
