@@ -19,7 +19,6 @@ body {
   background-color: white;
   font: 13.34px helvetica, arial, clean, sans-serif;
   *font-size: small;
-
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -148,7 +147,7 @@ ul.posts {
 /*
 /*****************************************************************************/
 
-#post {
+#page.content{
 	text-align: center;
 	font-size: 110%;
 	width: 40em;
@@ -161,7 +160,13 @@ ul.posts {
 	width: 40em;
 	margin: 3em auto 2em auto;
 	line-height: 1.5em;
+	margin-top: 2em;
 }
+
+#related h2 {
+    margin-bottom: 1em;
+  }
+
 #page_head title{
 	font-size: 200%;
 	font-family: serif;
@@ -204,10 +209,3 @@ ul.posts {
     background-color: #333;
   }
 
-#related {
-  margin-top: 2em;
-}
-
-  #related h2 {
-    margin-bottom: 1em;
-  }
