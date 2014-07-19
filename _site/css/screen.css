@@ -148,8 +148,14 @@ ul.posts {
 /*
 /*****************************************************************************/
 
-#post #related {
-
+#post {
+	text-align: center;
+	font-size: 110%;
+	width: 40em;
+	margin: 3em auto 2em auto;
+	line-height: 1.5em;
+}
+#related{
 	text-align: center;
 	font-size: 110%;
 	width: 40em;
@@ -158,7 +164,7 @@ ul.posts {
 }
 #page_head title{
 	font-size: 200%;
-	font-family: Georgia,serif;
+	font-family: serif;
 	text-align: left ;
 	font-size: 110%;
 }	
