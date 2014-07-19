@@ -146,14 +146,7 @@ ul.posts span {
 /*
 /*****************************************************************************/
 
-#page div.content{
-	text-align: center;
-	font-size: 110%;
-	font-family: serif;
-	width: 40em;
-	margin: 3em auto 2em auto;
-	line-height: 1.5em;
-}
+
 #related{
 	text-align: center;
 	font-size: 110%;
