@@ -4,7 +4,7 @@
  <title>Tom Preston-Werner</title>
  <link href="http://tom.preston-werner.com/atom.xml" rel="self"/>
  <link href="http://tom.preston-werner.com/"/>
- <updated>2014-07-20T11:41:21+08:00</updated>
+ <updated>2014-07-20T11:44:25+08:00</updated>
  <id>http://tom.preston-werner.com/</id>
  <author>
    <name>Tom Preston-Werner</name>
@@ -17,93 +17,130 @@
    <link href="http://tom.preston-werner.com/2014/07/19/markdownStudy.html"/>
    <updated>2014-07-19T00:00:00+08:00</updated>
    <id>http://tom.preston-werner.com/2014/07/19/markdownStudy</id>
-   <content type="html">markdown学习
-=============
-2014.07.19 SuZhou
-_____________________
-##第一次markdown亲密接触
-前些天想了下如何通过jekyll 在github page上进行文字排版，今天重新打开阮一峰的blog，转到其提供的blog参考链接，发现了原来可以抛弃传统的排版思路，通过markdown实现代码式的排版，这有点类似于之前使用过的LaTeX。经过一番尝试，发现其语法结构要比LaTeX简单许多，让我们可以更加专注于文字的表达，顿感相见恨晚，So nice！
+   <content type="html">&lt;h1&gt;markdown学习&lt;/h1&gt;
 
-* 列表的使用
+&lt;p&gt;2014.07.19 SuZhou&lt;/p&gt;
 
-    1. 如果列表项目间用空行分开，在输出 HTML 时Markdown 就会将项目内容用`&lt;p&gt;`标签包起来，举例来说:
+&lt;hr /&gt;
 
-        	*   Bird
+&lt;h2&gt;第一次markdown亲密接触&lt;/h2&gt;
 
-        	*   Magic
-     会被转换为
-        
-        	&lt;ul&gt;
-        	&lt;li&gt;&lt;p&gt;Bird&lt;/p&gt;&lt;/li&gt;
-        	&lt;li&gt;&lt;p&gt;Magic&lt;/p&gt;&lt;/li&gt;
-        	&lt;/ul&gt;
+&lt;p&gt;前些天想了下如何通过jekyll 在github page上进行文字排版，今天重新打开阮一峰的blog，转到其提供的blog参考链接，发现了原来可以抛弃传统的排版思路，通过markdown实现代码式的排版，这有点类似于之前使用过的LaTeX。经过一番尝试，发现其语法结构要比LaTeX简单许多，让我们可以更加专注于文字的表达，顿感相见恨晚，So nice！&lt;/p&gt;
 
-    2. 列表可实现嵌套
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;列表的使用&lt;/p&gt;
 
-* 链接
-	1. 行内式
-	
-		要建立一个行内式的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，例如：
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt; 如果列表项目间用空行分开，在输出 HTML 时Markdown 就会将项目内容用&lt;code&gt;&amp;lt;p&amp;gt;&lt;/code&gt;标签包起来，举例来说:&lt;/p&gt;
 
-			This is [an example](http://example.com/ &quot;Title&quot;) inline link.
+&lt;pre&gt;&lt;code&gt;  *   Bird
 
-			[This link](http://example.net/) has no title attribute.
-		转换为
-	
-			&lt;p&gt;This is &lt;a href=&quot;http://example.com/&quot; title=&quot;Title&quot;&gt;
-			an example&lt;/a&gt; inline link.&lt;/p&gt;
+  *   Magic
+&lt;/code&gt;&lt;/pre&gt;
 
-			&lt;p&gt;&lt;a href=&quot;http://example.net/&quot;&gt;This link&lt;/a&gt; has no
-			title attribute.&lt;/p&gt;
-	2. 参考式
-		
-		参考式的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：
+&lt;p&gt;会被转换为&lt;/p&gt;
 
-			This is [an example][id] reference-style link.
-		你也可以选择性地在两个方括号中间加上一个空格：
+&lt;pre&gt;&lt;code&gt;   &amp;lt;ul&amp;gt;
+   &amp;lt;li&amp;gt;&amp;lt;p&amp;gt;Bird&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+   &amp;lt;li&amp;gt;&amp;lt;p&amp;gt;Magic&amp;lt;/p&amp;gt;&amp;lt;/li&amp;gt;
+   &amp;lt;/ul&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt; 列表可实现嵌套&lt;/p&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;链接&lt;/p&gt;
 
-			This is [an example] [id] reference-style link.
-		接着，在文件的任意处，你可以把这个标记的链接内容定义出来：
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt; 行内式&lt;/p&gt;
 
-			[id]: http://example.com/  &quot;Optional Title Here&quot;
-* 代码
-	
-	1. 行内代码
-		
-		如果要标记一小段行内代码，你可以用反引号把它包起来（`），例如：
+&lt;p&gt;  要建立一个行内式的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，例如：&lt;/p&gt;
 
-			Use the `printf()` function.
-		会产生：
+&lt;pre&gt;&lt;code&gt;  This is [an example](http://example.com/ &quot;Title&quot;) inline link.
 
-			&lt;p&gt;Use the &lt;code&gt;printf()&lt;/code&gt; function.&lt;/p&gt;
+  [This link](http://example.net/) has no title attribute.
+&lt;/code&gt;&lt;/pre&gt;
 
-	**note** :
-	如果要在代码区段内插入反引号，你可以用多个反引号来开启和结束代码区段：
-			
-		``There is a literal backtick (`) here.``
+&lt;p&gt;  转换为&lt;/p&gt;
 
-* 图片
+&lt;pre&gt;&lt;code&gt;  &amp;lt;p&amp;gt;This is &amp;lt;a href=&quot;http://example.com/&quot; title=&quot;Title&quot;&amp;gt;
+  an example&amp;lt;/a&amp;gt; inline link.&amp;lt;/p&amp;gt;
 
-	行内式的图片语法看起来像是：
+  &amp;lt;p&amp;gt;&amp;lt;a href=&quot;http://example.net/&quot;&amp;gt;This link&amp;lt;/a&amp;gt; has no
+  title attribute.&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt; 参考式&lt;/p&gt;
 
-		![Alt text](/path/to/img.jpg)
+&lt;p&gt;  参考式的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：&lt;/p&gt;
 
-		![Alt text](/path/to/img.jpg &quot;Optional title&quot;)
-	详细叙述如下：
+&lt;pre&gt;&lt;code&gt;  This is [an example][id] reference-style link.
+&lt;/code&gt;&lt;/pre&gt;
 
-	* 一个惊叹号 !
-	* 接着一个方括号，里面放上图片的替代文字
-	* 接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上 选择性的 'title' 文字。
-	
-	参考式的图片语法则长得像这样：
+&lt;p&gt;  你也可以选择性地在两个方括号中间加上一个空格：&lt;/p&gt;
 
-		![Alt text][id]
- 	
-	* 「id」是图片参考的名称，图片参考的定义方式则和连结参考一样：
+&lt;pre&gt;&lt;code&gt;  This is [an example] [id] reference-style link.
+&lt;/code&gt;&lt;/pre&gt;
 
-		[id]: url/to/image  &quot;Optional title attribute&quot;
+&lt;p&gt;  接着，在文件的任意处，你可以把这个标记的链接内容定义出来：&lt;/p&gt;
 
-	**note:** 到目前为止， Markdown 还没有办法指定图片的宽高，如果你需要的话，你可以使用普通的 &lt;img&gt; 标签。
+&lt;pre&gt;&lt;code&gt;  [id]: http://example.com/  &quot;Optional Title Here&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;代码&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt; 行内代码&lt;/p&gt;
+
+&lt;p&gt;  如果要标记一小段行内代码，你可以用反引号把它包起来（`），例如：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  Use the `printf()` function.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;  会产生：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  &amp;lt;p&amp;gt;Use the &amp;lt;code&amp;gt;printf()&amp;lt;/code&amp;gt; function.&amp;lt;/p&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;  &lt;strong&gt;note&lt;/strong&gt; :
+  如果要在代码区段内插入反引号，你可以用多个反引号来开启和结束代码区段：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  ``There is a literal backtick (`) here.``
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;图片&lt;/p&gt;
+
+&lt;p&gt;  行内式的图片语法看起来像是：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  ![Alt text](/path/to/img.jpg)
+
+  ![Alt text](/path/to/img.jpg &quot;Optional title&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;  详细叙述如下：&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;一个惊叹号 !&lt;/li&gt;
+&lt;li&gt;接着一个方括号，里面放上图片的替代文字&lt;/li&gt;
+&lt;li&gt;接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上 选择性的 'title' 文字。&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;  参考式的图片语法则长得像这样：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;  ![Alt text][id]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;「id」是图片参考的名称，图片参考的定义方式则和连结参考一样：&lt;/p&gt;
+
+&lt;p&gt;  [id]: url/to/image  &quot;Optional title attribute&quot;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;p&gt;  &lt;strong&gt;note:&lt;/strong&gt; 到目前为止， Markdown 还没有办法指定图片的宽高，如果你需要的话，你可以使用普通的 &lt;img&gt; 标签。&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
 </content>
  </entry>
  
