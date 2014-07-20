@@ -1,4 +1,4 @@
 baseurl: huntershuai.github.io
-markdown: kramdown
+markdown: redicount 
 markdown_ext: markdown, mkdown, mkdn, mkd, md
 
