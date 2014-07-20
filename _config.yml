@@ -1,4 +1,3 @@
 baseurl: huntershuai.github.io
 markdown: rdiscount 
-markdown_ext: markdown, mkdown, mkdn, mkd, md
 

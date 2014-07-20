@@ -4,7 +4,7 @@
  <title>Tom Preston-Werner</title>
  <link href="http://tom.preston-werner.com/atom.xml" rel="self"/>
  <link href="http://tom.preston-werner.com/"/>
- <updated>2014-07-20T10:54:07+08:00</updated>
+ <updated>2014-07-20T11:41:21+08:00</updated>
  <id>http://tom.preston-werner.com/</id>
  <author>
    <name>Tom Preston-Werner</name>
@@ -19,7 +19,7 @@
    <id>http://tom.preston-werner.com/2014/07/19/markdownStudy</id>
    <content type="html">markdown学习
 =============
---2014.07.19 SuZhou
+2014.07.19 SuZhou
 _____________________
 ##第一次markdown亲密接触
 前些天想了下如何通过jekyll 在github page上进行文字排版，今天重新打开阮一峰的blog，转到其提供的blog参考链接，发现了原来可以抛弃传统的排版思路，通过markdown实现代码式的排版，这有点类似于之前使用过的LaTeX。经过一番尝试，发现其语法结构要比LaTeX简单许多，让我们可以更加专注于文字的表达，顿感相见恨晚，So nice！
