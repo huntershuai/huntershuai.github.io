@@ -7,8 +7,8 @@
 /* Global Reset */
 
 * {
-  margin: 10em;
-  padding: 10em;
+  margin: 0em;
+  padding: 0em;
 }
 
 html, body {
@@ -145,6 +145,17 @@ ul.posts span {
 /* Posts
 /*
 /*****************************************************************************/
+#page.content
+{
+	margin: 5px;
+	padding: 0px;
+	width: 70px;
+	text-align: center;
+	font-size: 2em;
+	font-family: KaiTi, Times, TimesNR, 'New Century Schoolbook',
+	     Georgia, 'New York', serif;
+	
+}
 
 
 #related{
