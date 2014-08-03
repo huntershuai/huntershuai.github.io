@@ -80,7 +80,7 @@ ul.posts span {
   font-size: 110%;
   text-align: justify;
   width: 40em;
-  margin: 3em auto 2em 2em;
+  margin: 3em auto 2em auto;
   line-height: 1.5em;
 }
 
@@ -147,8 +147,9 @@ ul.posts span {
 /*****************************************************************************/
 #page div.content
 {
-	margin: 3px auto 2px 2px;
-	padding-left:20em;
+	margin: 3px 2px auto 2px;
+	padding-left: 12em;
+	padding-right: 12em;
 	width: 60em;
 	font-size: 1.2em;
 	font-family: KaiTi, Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York', serif;
