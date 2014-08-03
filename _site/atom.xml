@@ -4,13 +4,26 @@
  <title>Tom Preston-Werner</title>
  <link href="http://tom.preston-werner.com/atom.xml" rel="self"/>
  <link href="http://tom.preston-werner.com/"/>
- <updated>2014-08-03T22:06:16+08:00</updated>
+ <updated>2014-08-03T23:06:20+08:00</updated>
  <id>http://tom.preston-werner.com/</id>
  <author>
    <name>Tom Preston-Werner</name>
    <email>tom@mojombo.com</email>
  </author>
 
+ 
+ <entry>
+   <title>天之涯,海之角(sanya)</title>
+   <link href="http://tom.preston-werner.com/2014/08/03/sanya.html"/>
+   <updated>2014-08-03T00:00:00+08:00</updated>
+   <id>http://tom.preston-werner.com/2014/08/03/sanya</id>
+   <content type="html">&lt;h1&gt;天之涯，海之角（2014.3.14-2014.4.14）&lt;/h1&gt;
+
+&lt;p&gt;在毕业之前有机会去趟三亚，去见识下阳光照耀下蔚蓝色的真正的大海。出发时是北京的三月份，寒意仍未退去，我也还穿着厚实的冲锋衣，外加秋衣秋裤，怕在飞机上会冷，保持全套原装备上了飞机，直到飞机打开舱门的一刻，我才意识到，穿成那样下飞机，会不会让人觉得脑子进水了。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;~/image/sanya/1.jpg&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>markdown study</title>
@@ -141,28 +154,6 @@
 &lt;p&gt;  &lt;strong&gt;note:&lt;/strong&gt; 到目前为止， Markdown 还没有办法指定图片的宽高，如果你需要的话，你可以使用普通的 &lt;img&gt; 标签。&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-</content>
- </entry>
- 
- <entry>
-   <title>Back to Github!</title>
-   <link href="http://tom.preston-werner.com/2014/06/30/backToGithub.html"/>
-   <updated>2014-06-30T00:00:00+08:00</updated>
-   <id>http://tom.preston-werner.com/2014/06/30/backToGithub</id>
-   <content type="html">　　&lt;h2&gt;Back to Github!&lt;/h2&gt;
-　　&lt;p&gt;back to Github!&lt;/p&gt;
-　　&lt;p&gt;30 Jun 2014&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>hello world!</title>
-   <link href="http://tom.preston-werner.com/2014/05/20/helloworld.html"/>
-   <updated>2014-05-20T00:00:00+08:00</updated>
-   <id>http://tom.preston-werner.com/2014/05/20/helloworld</id>
-   <content type="html">　　&lt;h2&gt;hello world!&lt;/h2&gt;
-　　&lt;p&gt;我的第一篇文章&lt;/p&gt;
-　　&lt;p&gt;20 May 2014&lt;/p&gt;
 </content>
  </entry>
  
