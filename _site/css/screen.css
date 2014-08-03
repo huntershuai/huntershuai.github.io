@@ -148,7 +148,7 @@ ul.posts span {
 #page div.content
 {
 	margin: 3px auto 2px 2px;
-	padding: 0px;
+	padding: 0px auto 20px auto;
 	width: 60em;
 	text-align: center;
 	font-size: 1em;
