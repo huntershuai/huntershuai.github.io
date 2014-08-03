@@ -145,18 +145,15 @@ ul.posts span {
 /* Posts
 /*
 /*****************************************************************************/
-#page.content
+#page div.content
 {
 	margin: 5px;
 	padding: 0px;
 	width: 70px;
 	text-align: center;
 	font-size: 2em;
-	font-family: KaiTi, Times, TimesNR, 'New Century Schoolbook',
-	     Georgia, 'New York', serif;
-	
+	font-family: KaiTi, Times, TimesNR, 'New Century Schoolboo		k', Georgia, 'New York', serif;
 }
-
 
 #related{
 	text-align: center;
