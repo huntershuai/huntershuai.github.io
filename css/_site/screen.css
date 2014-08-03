@@ -7,8 +7,8 @@
 /* Global Reset */
 
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0em;
+  padding: 0em;
 }
 
 html, body {
@@ -18,8 +18,6 @@ html, body {
 body {
   background-color: white;
   font: 13.34px helvetica, arial, clean, sans-serif;
-  *font-size: small;
-
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -62,15 +60,15 @@ ul.posts {
   margin-bottom: 2em;
 }
 
-  ul.posts li {
+ul.posts li {
     line-height: 1.75em;
-  }
+}
 
-  ul.posts span {
+ul.posts span {
     color: #aaa;
     font-family: Monaco, "Courier New", monospace;
     font-size: 80%;
-  }
+}
 
 /*****************************************************************************/
 /*
@@ -92,69 +90,84 @@ ul.posts {
   margin-bottom: 2em;
 }
 
-  .site .title a {
+.site .title a {
     color: #a00;
     text-decoration: none;
-  }
+}
 
-  .site .title a:hover {
+.site .title a:hover {
     color: black;
-  }
+}
 
-  .site .title a.extra {
+.site .title a.extra {
     color: #aaa;
     text-decoration: none;
     margin-left: 1em;
-  }
+}
 
-  .site .title a.extra:hover {
+.site .title a.extra:hover {
     color: black;
-  }
+}
 
-  .site .meta {
+.site .meta {
     color: #aaa;
-  }
+}
 
-  .site .footer {
+.site .footer {
     font-size: 80%;
     color: #666;
     border-top: 4px solid #eee;
     margin-top: 2em;
     overflow: hidden;
-  }
+}
 
-    .site .footer .contact {
+.site .footer .contact {
       float: left;
       margin-right: 3em;
-    }
+}
 
-      .site .footer .contact a {
-        color: #8085C1;
-      }
+.site .footer .contact a {
+      color: #8085C1;
+}
 
-    .site .footer .rss {
+.site .footer .rss {
       margin-top: 1.1em;
       margin-right: -.2em;
       float: right;
-    }
+}
 
-      .site .footer .rss img {
-        border: 0;
-      }
+.site .footer .rss img {
+      border: 0;
+}
 
 /*****************************************************************************/
 /*
 /* Posts
 /*
 /*****************************************************************************/
+#page div.content
+{
+	margin: 3px auto 2px 2px;
+	padding: 0px;
+	width: 60em;
+	text-align: center;
+	font-size: 1em;
+	font-family: KaiTi, Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York', serif;
+}
 
-#post,#related {
+#related{
 	text-align: center;
 	font-size: 110%;
 	width: 40em;
 	margin: 3em auto 2em auto;
 	line-height: 1.5em;
+	margin-top: 2em;
 }
+
+#related h2 {
+    margin-bottom: 1em;
+  }
+
 #page_head title{
 	font-size: 200%;
 	font-family: serif;
@@ -197,10 +210,3 @@ ul.posts {
     background-color: #333;
   }
 
-#related {
-  margin-top: 2em;
-}
-
-  #related h2 {
-    margin-bottom: 1em;
-  }
