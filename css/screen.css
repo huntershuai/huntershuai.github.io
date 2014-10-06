@@ -69,13 +69,14 @@ ul.posts span {
     font-family: Monaco, "Courier New", monospace;
     font-size: 80%;
 }
-
+/*
 code
 {
 	font-family: 'courier new';
 	font-size: 0.5em;
 	border-style: groove;
 }
+*/
 /*****************************************************************************/
 /*
 /* Site
@@ -153,11 +154,10 @@ code
 /*****************************************************************************/
 #page div.content
 {
-	margin: 3px 0px auto 0px;
-	padding-left: 20%;
-	padding-right: 20%;
-	width: 60%;
-	font-size: 1.1em;
+	margin: 3px 2px auto 1px;
+	padding-left: 10%;
+	padding-right: 10%;
+	width: 80%;
 	font-family: Arial,"楷体",KaiTi,Times,TimesNR,'New Century Schoolbook',Georgia,'New York',serif;
 }
 
@@ -182,7 +182,7 @@ code
 }	
   /* standard */
 
-  #post pre {
+  #content pre {
     border: 1px solid #ddd;
     background-color: #eef;
     padding: 0 .4em;
@@ -193,26 +193,28 @@ code
     margin-left: 1.35em;
   }
 
-  #post code {
+  #content code {
     border: 1px solid #ddd;
     background-color: #eef;
     font-size: 85%;
-    padding: 0 .2em;
+	font-style: 'courier new';
+	padding: 0 .2em;
+
   }
 
-    #post pre code {
+    #content pre code {
       border: none;
     }
 
   /* terminal */
 
-  #post pre.terminal {
+  #content pre.terminal {
     border: 1px solid black;
     background-color: #333;
     color: white;
   }
 
-  #post pre.terminal code {
+  #content pre.terminal code {
     background-color: #333;
   }
 
