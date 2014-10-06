@@ -70,6 +70,11 @@ ul.posts span {
     font-size: 80%;
 }
 
+code
+{
+	font-family: 'courier new';
+	font-size: 0.5em;
+}
 /*****************************************************************************/
 /*
 /* Site
