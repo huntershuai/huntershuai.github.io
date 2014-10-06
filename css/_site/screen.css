@@ -70,6 +70,12 @@ ul.posts span {
     font-size: 80%;
 }
 
+code
+{
+	font-family: 'courier new';
+	font-size: 0.5em;
+	border-style: ridge;
+}
 /*****************************************************************************/
 /*
 /* Site
@@ -147,12 +153,12 @@ ul.posts span {
 /*****************************************************************************/
 #page div.content
 {
-	margin: 3px auto 2px 2px;
-	padding: 0px;
-	width: 60em;
-	text-align: center;
-	font-size: 1em;
-	font-family: KaiTi, Times, TimesNR, 'New Century Schoolbook', Georgia, 'New York', serif;
+	margin: 3px 0px auto 0px;
+	padding-left: 20%;
+	padding-right: 20%;
+	width: 60%;
+	font-size: 1.1em;
+	font-family: Arial,"楷体",KaiTi,Times,TimesNR,'New Century Schoolbook',Georgia,'New York',serif;
 }
 
 #related{
