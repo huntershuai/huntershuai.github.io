@@ -159,7 +159,7 @@ code
 	padding-right: 10%;
 	width: 80%;
 	font-family: Arial,"楷体",KaiTi,Times,TimesNR,'New Century Schoolbook',Georgia,'New York',serif;
-	font-size: 2em;
+	font-size: 80%;
 }
 
 #page div.related{
@@ -198,14 +198,14 @@ code
     border: 1px solid #ddd;
     background-color: #eef;
     font-size: 85%;
-	font-style: 'courier new';
+	font-style: 'Courier New';
 	padding: 0 .2em;
 
   }
 
-    #page div.content pre code {
+  #page div.content pre code {
       border: none;
-    }
+  }
 
   /* terminal */
 
