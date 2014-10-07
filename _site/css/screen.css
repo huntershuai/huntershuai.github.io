@@ -155,7 +155,7 @@ ul.posts span {
 	font-size: 1.2em;
 }
 
-#page div.related{
+#page #related{
 	text-align: center;
 	font-size: 110%;
 	width: 40em;
@@ -164,7 +164,7 @@ ul.posts span {
 	margin-top: 2em;
 }
 
-  #page div.related h2 {
+  #page div #related h2 {
     margin-bottom: 1em;
   }
 
