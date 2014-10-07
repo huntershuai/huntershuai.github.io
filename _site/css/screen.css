@@ -21,7 +21,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-size: 100%;
+/*  font-size: 100%;*/
 }
 
 h1 {
@@ -159,9 +159,10 @@ code
 	padding-right: 10%;
 	width: 80%;
 	font-family: Arial,"楷体",KaiTi,Times,TimesNR,'New Century Schoolbook',Georgia,'New York',serif;
+	font-size: 2em;
 }
 
-#related{
+#page div.related{
 	text-align: center;
 	font-size: 110%;
 	width: 40em;
@@ -170,7 +171,7 @@ code
 	margin-top: 2em;
 }
 
-#related h2 {
+#page div.related h2 {
     margin-bottom: 1em;
   }
 
@@ -182,7 +183,7 @@ code
 }	
   /* standard */
 
-  #content pre {
+  #page div.content pre {
     border: 1px solid #ddd;
     background-color: #eef;
     padding: 0 .4em;
@@ -193,7 +194,7 @@ code
     margin-left: 1.35em;
   }
 
-  #content code {
+  #page div.content code {
     border: 1px solid #ddd;
     background-color: #eef;
     font-size: 85%;
@@ -202,19 +203,19 @@ code
 
   }
 
-    #content pre code {
+    #page div.content pre code {
       border: none;
     }
 
   /* terminal */
 
-  #content pre.terminal {
+  #page div.content pre.terminal {
     border: 1px solid black;
     background-color: #333;
     color: white;
   }
 
-  #content pre.terminal code {
+  #page div.content pre.terminal code {
     background-color: #333;
   }
 
