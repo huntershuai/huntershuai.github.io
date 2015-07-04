@@ -1,6 +1,10 @@
+---
+title:IOS learning
+layout: posts
+author: huntershuai
+---
 
-
-IOS Learning
+IOS learning 
 ========
 This is a collection of ios learning experience and knowleadge, and will be updated in the coming days.
 2015.06.17 @ suzhou
