@@ -148,6 +148,11 @@ ul.posts span {
 /* Posts
 /*
 /*****************************************************************************/
+#page div.title
+{
+    margin-left: 1em;
+}
+}
 #page div.content
 {
 	margin: 3px 2px auto 2px;
