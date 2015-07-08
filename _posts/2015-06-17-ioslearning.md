@@ -1,8 +1,9 @@
-
 ---
 title: IOS Learning 
 layout: posts
+author: huntershuai
 ---
+
 
 IOS learning 
 ========
