@@ -148,7 +148,7 @@ ul.posts span {
 /* Posts
 /*
 /*****************************************************************************/
-#page div.title
+#page div.title a
 {
     margin-left: 1em;
 }
