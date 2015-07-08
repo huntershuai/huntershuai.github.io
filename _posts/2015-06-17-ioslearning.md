@@ -124,6 +124,26 @@ there is an example:
  
 
 
+###xcode 
+Add this phase to list some problem when using xcode as part of ios learning.
+
+1.
+
+>directory not found for option '-L...'
+
+>clang: error: linker command failed with exit code 1 (use -v to see invocation)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

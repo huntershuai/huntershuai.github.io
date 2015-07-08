@@ -1,6 +1,7 @@
 ---
-title: C/C++ problems
+title: git learning 
 layout: posts
+author: huntershuai
 ---
 
 git 学习笔记
