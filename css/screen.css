@@ -206,7 +206,7 @@ ul.posts span
 #page div.content code 
 {
 	border: 1px solid #ddd;
-	background-color:#F0FFFF;	/*#eef*/;
+	background-color:#eef;	/*#eef*/;
 	font-size: 85%;
 	font-style: 'Courier New';
 	padding: 0 .2em;
