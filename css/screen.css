@@ -152,7 +152,7 @@ ul.posts span
 /*****************************************************************************/
 #page div.title a
 {
-    margin-left: 1em;
+    margin-left: 10%;
 }
 
 #page div.content
@@ -206,7 +206,7 @@ ul.posts span
 #page div.content code 
 {
 	border: 1px solid #ddd;
-	background-color: #eef;
+	background-color:#F0FFFF;	/*#eef*/;
 	font-size: 85%;
 	font-style: 'Courier New';
 	padding: 0 .2em;
