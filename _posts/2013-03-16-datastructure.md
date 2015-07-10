@@ -54,14 +54,16 @@ author: huntershuai
 
 ##chapter 03 线性表
 
-顺序存储结构：数组实现
+
+
+###  顺序存储结构：数组实现
 
 时间复杂度：O(n)
 
 优点：更多的是存取数据的应用。可以快速的存取，无须为表中的元素逻辑关系增加额外的存储空间。
 
 缺点：不适合元素变化不大的情况；线性表长度过大，难以确定存储空间容量；早场空间碎片。
-     线性表存储结构：
+线性表存储结构：
 
 	typedef struct
      {
@@ -69,6 +71,42 @@ author: huntershuai
           int length;
      }sqList;
 
+
+###链式存储结构
+
+结点（node）: value & pointer
+
+头指针和头结点的区别：
+
+* 头指针--指针，指向第一个结点
+* 头指针--常用于标识链表
+* 头指针为链表必要元素，始终不为空
+* 头结点的作用主要体现在使得对链表的**每个节点**操作（`insert`,`delete`）得到统一
+
+**单链表**
+	
+	typedef struct node
+	{
+	   struct node *next;
+	   int value;
+	}
+	type struct node *linkList;
+* 顺序存储
+ 
+	查找：时间O(1)
+ 
+	插入和删除：时间O(n)
+
+* 链式存储-->
+
+	查找：时间O(n)
+	插入和删除：时间O(1)
+
+**note**：顺序存储的查找复杂度可以理解为在一个固定的已知区域进行查找，因此为O(1),而链式查找则需要依次遍历各个结点的位置（memory address）因此综合下来为O(n).而对于插入删除操作，前者需要移动多个结点进行插入与删除，平均下来时间复杂度为O(n),而后者在确定位置后，可即刻实现插入,时间复杂度为O(1).
+
+
+**静态链表**
+<img allign="center" src="~/images/data_structure/static_link_list.png"   />
 
 
 
