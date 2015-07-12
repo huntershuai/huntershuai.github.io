@@ -194,7 +194,9 @@ free(p);
 
 插入在队尾，删除在队头
 
-<img src="~/images/data_structure/cycle_queue.png"/>
+![alt cycle queue](~/images/data_structure/cycle_queue.png "cycle_queue")
+
+<img src="~/images/data_structure/cycle_queue.png" /></img>
 
 循环队列：front队头指针，rear队尾指针 front=rear空队列
 

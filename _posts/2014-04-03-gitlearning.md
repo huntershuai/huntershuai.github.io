@@ -33,3 +33,38 @@ cat .gitignore
 	
 	git rm --cached filename
 		
+## branch
+创建一个新branch
+
+	git branch branchName 
+	
+在各个branch及master之间进行切换
+	
+	git check out branchName/master
+	
+使用组合方式
+	
+	git checkout -b branchName
+	
+
+merge branch into master
+	
+* 首先切换到master
+
+		git checkout master
+	
+* 开始merge branch 到master 分支
+		
+		git merge branchName
+
+* 删除branch 分支
+		
+		git branch －d branchName
+	
+	
+	
+	
+	
+	
+	
+	
