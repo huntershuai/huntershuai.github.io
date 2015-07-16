@@ -443,6 +443,7 @@ m(m>0)个互不相交的有限集。
 
 	树的路径长度就是从树根到每一结点的路径长度之和
 
+<img src="/images/data_structure/aa.gif" width="300"/>
 
 
 
