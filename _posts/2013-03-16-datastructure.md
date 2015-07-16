@@ -107,7 +107,7 @@ author: huntershuai
 
 **静态链表**
 
-<img src="~/images/data_structure/static_link_list.png"   />
+<img src="/images/data_structure/static_link_list.png"   />
 
 	 静态链表的存储结构：     
      typedef struct
@@ -199,53 +199,53 @@ free(p);
 
 插入在队尾，删除在队头
 
-![alt cycle queue](/images/data_structure/cycle_queue.png"cycle_queue")
 
-<img src="~/images/data_structure/cycle_queue.png" width="400" alt="cycle queue"/>
+- 循环队列：front队头指针，rear队尾指针 front=rear空队列
 
-循环队列：front队头指针，rear队尾指针 front=rear空队列
+	<img src="/images/data_structure/cycle_queue.png"  alt="cycle queue"/>
 
-为避免删除数据时整个队列移动，将front指针不指向数组0元素，这样带来了新的问题：当插入新元素时，rear指针可能在队列未溢出时指向数组外，造成假溢出。
+	为避免删除数据时整个队列移动，将front指针不指向数组0元素，这样带来了新的问题：当插入新元素时，rear指针可能在队列未溢出时指向数组外，造成假溢出。
 
-注意：循环队列在判定队列满或空时需要两个条件：front=rear，和另外一个自设条件。
+	注意：循环队列在判定队列满或空时需要两个条件：front=rear，和另外一个自设条件。
 
-循环队列的存储结构
+	循环队列的存储结构
 
-	typedef struct
-	{
-     int data[maxsize];
-     int front;
-     int rear;
-	}sqQueue;
+		typedef struct
+		{
+     		int data[maxsize];
+     		int front;
+     		int rear;
+		}sqQueue;
 
-插入队列操作：
-（rear-front+QueuseSize）%maxsize;//计算队列长度的计算公式
+	插入队列操作：
 
-	void insert(int value, sqQueue q)
-	{
-     	if((q->rear+1)%maxsize==q->front)
-          	printf("error");
-     	else
-     	{
-          	q->data[rear]=value;
-          	q->rear=(q->rear+1)%maxsize;
-     	}
-	}
+	（rear-front+QueuseSize）%maxsize;//计算队列长度的计算公式
 
-出队列操作：
+		void insert(int value, sqQueue q)
+		{
+     		if((q->rear+1)%maxsize==q->front)
+          		printf("error");
+     		else
+     		{
+          		q->data[rear]=value;
+          		q->rear=(q->rear+1)%maxsize;
+     		}
+		}
 
-	int out(sqQueue q)
-	{
-      	if((q->rear+1)%maxsize==q->front)
-          	printf("error");
-     	int e=q->data[front];
-     	q->front=(q->front+1)%maxsize;
-     	return e;
-	}
+	出队列操作：
 
-队列的链式存储结构及实现
+		int out(sqQueue q)
+		{
+      		if((q->rear+1)%maxsize==q->front)
+          			printf("error");
+     		int e=q->data[front];
+     		q->front=(q->front+1)%maxsize;
+     		return e;
+		}
 
-就是线性表的单链表，只能尾进头出。
+- 队列的链式存储结构及实现
+
+	就是线性表的单链表，只能尾进头出。
 
 
 ##chapter 05 string 
@@ -263,10 +263,185 @@ unicode 16位二进制   ASCII 8位二进制
 
 ###KMP 朴素匹配算法
 
-![kmp ](~/images/data_structure/kmp.png)
+![kmp](/images/data_structure/kmp.png )
 
 关键在于求next数组
+	
+	void get_next(String T, int *next)
+	{
+		int i,j;
+		i=1;
+		j=0;
+		next[1]=0;
+		while(i<T[0])  //T[0] T length
+		{
+			if(j==0||T[i]==T[j])
+			{
+				++i;
+				++j;
+				next[i]=j;
+			}
+			else
+				j=next[j];
+			
+		}
+	}
 
+
+##chapter 06 Tree
+
+Definiton:
+
+n个结点的有限集，n=0时为空树，n>1，其余结点可分为
+m(m>0)个互不相交的有限集。
+
+**note**
+
+1. 数据结构中的树只能有一个根节点。
+2. m>0时，子树的个数没有限制，但一定是互不相交的。
+
+* 结点拥有的子树数为结点的度。树的度为结点中度的最大值
+* 树的深度（高度）：树的结点中最大层次
+* 树中结点的各子树看成是从左至右是有次序的，不能互换的，则为有序树。
+
+
+###树的存储结构
+- 双亲表示法：
+
+   双亲域，长子域
+
+- 孩子表示法：
+
+   方案一：每个节点维护一个指针域，指针域的长度为树的度。
+          对于结点度相差很大的树，浪费空间。
+   
+   方案二：按结点度的大小分配。
+          维护每个结点的度值，带来时间上的开销。
+- 二叉树： 
+	
+	n个节点的集合，或者为空集，或者由一个根节点和两棵互不相交的分别称为根节点的左子树和右子树组成
+	
+	－ 结点度最大为2
+	
+	－左子树和右子树有顺序，不能颠倒；
+	
+	－即使结点只有一颗子树，也要区分左右子树。
+
+	1.斜树
+	
+     只有左子树--左斜树，，只有右子树-右斜树
+     线性表的结构可理解为树的特殊表现形式
+    
+    2.满二叉树
+    
+     所有分支结点都有左右子树，并且所有叶子结点都在同一层级上。
+     在同深度的二叉树中，满二叉树的叶子结点最多，结点也最多
+    
+    3，完全二叉树
+    对二叉树按层序进行编号，编号节点与同样深度的满二叉树节点编号相同
+    按层序标号连续的二叉树
+    >
+     叶子结点只能出现在最下两层；
+          最下层叶子一定集中在左部连续位置；
+          倒数第二层，若有叶子，则集中在右部连续位置；
+          同样结点数的二叉树，完全二叉树的深度最小。
+
+- 二叉树存储结构
+
+  由于完全二叉树定义严格，可用顺序结构来存储而二叉树
+  
+  非完全二叉树用顺序结构存储将带来空间浪费，可用二叉链表来存储
+  
+－ 遍历二叉树
+
+ 前序：根结点，左子树，右子树
+
+<img src="/images/data_structure/pre_traversal.png" alt="pre_traversal"/>
+
+	前序遍历算法：
+     void preOrderTraverse(node T)
+     {
+          if(T==null)
+          {
+               return;
+          }
+          else
+          {
+               printf("%c",T->data);
+               preOrderTraverse(T->lchild);
+               preOrderTraverse(T->rchild);
+          }
+     }
+     
+     
+ 中序遍历   左子树-根结点-右子树
+
+<img src="/images/data_structure/middle_traversal.png" alt="middle_traversal"/>
+
+	中序遍历算法：
+	void inOrderTraverse（node T）
+	{
+     	if(T==null)
+     	{
+          	return;
+     	}
+     	else
+     	{
+            inOrderTraverse（T->lchild）;
+            printf("%c",T->value);
+            inOrderTraverse(T->rchild);
+     	}
+	}
+     
+后序遍历：从左到右先叶子节点后结点遍历左右子树，最后根节点。
+
+<img src="/images/data_structure/back_traversal.png" alt="back_traversal"/>
+
+后续遍历算法：
+
+	void backOrderTraverse（node T）
+	{
+       if(T=Null)
+           return;
+       else
+     	{
+          backOrderTraverse(T->lchild);
+          backOrderTraverse(T->rchild);
+          printf("%c",T->value);
+     	}
+	}	
+
+层序遍历：根节点开始，从左到右访问
+<img src="/images/data_structure/floor_traversal.png" alt="floor_traversal"/>
+
+
+－ 推导二叉树：
+
+   已知前序遍历和中序遍历序列，和已知后序遍历和中序遍历序列，可以唯一确定一棵二叉树.
+  
+－ 线索二叉树:
+     
+   加上遍历方法线索的二叉链表称为线索链表.这样把一个二叉树变成了一个双向链表,
+
+－ 树，森林和二叉树的转换
+
+<img src="/images/data_structure/tree_to_bin1.png" width="300"/>
+
+<img src="/images/data_structure/tree_to_bin2.png" width="300"/>
+
+<img src="/images/data_structure/tree_to_bin3.png" width="300"/>
+
+
+森林转换成二叉树
+
+<img src="/images/data_structure/forest_to_bin1.png" width="300"/>
+<img src="/images/data_structure/forest_to_bin2.png" width="300"/>
+<img src="/images/data_structure/forest_to_bin3.png" width="300"/>
+
+
+- 赫夫曼树及其应用
+
+	树的路径长度就是从树根到每一结点的路径长度之和
 
 
 
