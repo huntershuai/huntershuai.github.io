@@ -199,7 +199,7 @@ free(p);
 
 插入在队尾，删除在队头
 
-![alt cycle queue](~/images/data_structure/cycle_queue.png"cycle_queue")
+![alt cycle queue](/images/data_structure/cycle_queue.png"cycle_queue")
 
 <img src="~/images/data_structure/cycle_queue.png" width="400" alt="cycle queue"/>
 
