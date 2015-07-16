@@ -164,39 +164,44 @@ free(p);
           int top2;
      }sqDoubleStack;
 
-**stack**
+###stack
 
 不存在线性表的插入和删除问题，缺陷是必须实现确定数组存储空间的额大小。
 
-两栈共享空间
-一个指向栈顶，一个指向栈底，同时向中间靠拢。
-适用于：如买卖股票，一个买入，一个卖出，同时增加和减少的情况。
+- 两栈共享空间
 
-栈的链式存储结构及实现
-不存在栈满的情况，头指针为栈顶指针。
+	一个指向栈顶，一个指向栈底，同时向中间靠拢。
+	
+	适用于：如买卖股票，一个买入，一个卖出，同时增加和减少的情况。
 
-栈的应用：递归
+- 栈的链式存储结构及实现
 
-斐波那契数列实现1，1，2，3，5，8，13.。。
+	不存在栈满的情况，头指针为栈顶指针。
 
-使用递归时注意：递归定义必须有一个条件：满足递归时不再运行，不再引用自身而是返回值退出。
+- 栈的应用：
 
-递归过程退回的顺序是它前行顺序的逆序，符合栈的结构
+	**递归**
 
-栈的应用：四则运算表达式求值
+	斐波那契数列实现1，1，2，3，5，8，13.。。
 
-后缀表达式（逆波兰法）可用于求解leetcode上关于简单字符串计算器问题
+	使用递归时注意：递归定义必须有一个条件：满足递归时不再运行，不再引用自身而是返回值退出。
 
-[百科](http://baike.baidu.com/link?url=C89qXxFjYPGbz73XP4qj5VcXOhdxA4uFgnheEaC2xv5gZnjtvXb8aC_QxkiQakGJaZsIaPxppIrP2fcH7LPCFq)
+	递归过程退回的顺序是它前行顺序的逆序，符合栈的结构
+
+	**四则运算表达式求值**
+
+	后缀表达式（逆波兰法）可用于求解leetcode上关于简单字符串计算器问题
+
+	[百科](http://baike.baidu.com/link?	url=C89qXxFjYPGbz73XP4qj5VcXOhdxA4uFgnheEaC2xv5gZnjtvXb8aC_QxkiQakGJaZsIaPxppIrP2fcH7LPCFq)
 >不包含括号，运算符放在两个运算对象的后面，所有的计算按运算符出现的顺序，严格从左向右进行（不再考虑运算符的优先规则，如：(2 + 1) * 3 ， 即2 1 + 3 *
 
-**queue**
+###queue
 
 插入在队尾，删除在队头
 
 ![alt cycle queue](~/images/data_structure/cycle_queue.png "cycle_queue")
 
-<img src="~/images/data_structure/cycle_queue.png" /></img>
+<img src="~/images/data_structure/cycle_queue.png" ></img>
 
 循环队列：front队头指针，rear队尾指针 front=rear空队列
 
@@ -253,6 +258,16 @@ unicode 16位二进制   ASCII 8位二进制
      s="hap"<t="happy"
      s="happen"<t="happy"  //从不同的地方比较ASCII码的大小  e<y;
     
-
 串最后“\0”不计入串长度
+
+
+###KMP 朴素匹配算法
+
+![kmp ](~/images/data_structure/kmp.png)
+
+关键在于求next数组
+
+
+
+
 
