@@ -429,8 +429,6 @@ m(m>0)个互不相交的有限集。
 
 <img src="/images/data_structure/tree_to_bin2.png" width="300"/>
 
-<img src="/images/data_structure/tree_to_bin3.png" width="300"/>
-
 
 森林转换成二叉树
 

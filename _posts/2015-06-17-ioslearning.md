@@ -75,7 +75,7 @@ This is a collection of ios learning experience and knowleadge, and will be upda
 ###MVC
 model view controller
 
-<img src="~/images/ios/mvc.png" width=500 alt="mvc introduction" ></img>
+<img src="/images/ios/mvc.png" width=500 alt="mvc introduction" ></img>
 
 
 
