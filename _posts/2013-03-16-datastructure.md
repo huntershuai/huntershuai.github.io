@@ -412,6 +412,7 @@ m(m>0)个互不相交的有限集。
 	}	
 
 层序遍历：根节点开始，从左到右访问
+
 <img src="/images/data_structure/floor_traversal.png" alt="floor_traversal"/>
 
 
@@ -443,7 +444,207 @@ m(m>0)个互不相交的有限集。
 
 	树的路径长度就是从树根到每一结点的路径长度之和
 
-<img src="/images/data_structure/aa.gif" width="300"/>
+
+##查找
+
+>关键字（key）是数据元素的某个数据项的值，若能唯一的标识一个记录，则称为主关键字（primary key）
+     查找就是根据某个值，在查找表中确定一个其关键字等于给定值的数据元素（或记录）
 
 
+
+ - 顺序查找：依次比对
+ 
+	 设置哨兵的方式，当n很大时，同样可提高效率。
+	 用while()比较方式代替for循环判定比较。
+ 
+ - 有序表查找
+ 
+	  折半查找（二分查找）：要求有序表。
+	  
+	  插值查找：适用于分布比较均匀的有序表。
+	  斐波那契查找：利用斐波那契数列.
+
+ -  线性索引查找
+	 索引:把一个关键字与它对应的记录相关联
+	 线性索引:将索引项集合组织为线性结构
+      1.稠密索引:索引项按照关键码有序的排列
+
+
+__二叉排序树__
+
+二叉排序树进行中序遍历可得到有序序列。
+
+结点的删除：
+找到删除结点的前驱和后即来代替将要删除的结点。
+
+
+__平衡二叉树__
+
+是一种二叉排序树，每一个结点的左子树和右子树的高度差至多等于1.  用途，构建开销相对较小的二叉排序树。
+平衡因子：左子树深度减去右子树深度。
+
+<img src="/images/data_structure/balance_tree.png" width="300"/>
+
+距离插入结点最近，切平衡因子（BF）的绝对值大于1的结点为根的子树，称为“最小不平衡树”
+
+<img src="/images/data_structure/min_non_banlance_tree.png" width="300"/>
+
+
+不平衡树调整为平衡树：
+
+	发现BF大于等于二，则二叉树进行右旋（顺时针）。小于等于-2则进行左旋（逆时针）。若根节点与子节点BF符号不相同，则不能直接进行简单的左旋。
+
+
+- 哈希表
+
+	散列函数构造方法：
+
+ 	1.直接定址法：
+                 
+      要求事先知道表的分布情况，适合查找表较小且连续的情况。
+          
+    2.数字分析法：
+
+      适合处理关键字位数比较大的情况，事先知道关键字的分布且关键字的若干位分布较均匀。
+          
+    3.平方取中法：（平方后取中间位数）适合位数小的关键字，不知道关键字的分布。
+          
+    4.折叠法：
+
+	5.除留余数法（最常用）：
+	
+	处理冲突的方法：
+	
+	1.开放定址法：一旦发生冲突，就寻找下一个空的散列地址，只要散列表足够大，
+	
+	2.再散列函数法：使用多个散列函数
+	
+	3.链地址法：
+
+	4.公共溢出区法：
+
+
+##排序
+
+__排序的稳定性__
+
+若两个键值key1=key2相等，排序前key1领先key2，若排序后仍保持此次序不变，则称排序方法是稳定的，若排序后改变则为不稳定。
+
+__内排序与外排序__
+
+内排序：待排序记录全部放在内存中，
+
+外排序：记录太多，整个排序过程需要内外存之间多次交换数据才行。
+
+内排序：插入排序，交换排序，选择排序，归并排序。
+
+
+- 冒泡排序
+
+		 正规方法：
+
+	     for(i=0;i<length;i++)
+	          for(j=length-1;j>=i;j--)
+	               {
+	                     if(L[j]<L[j-1])
+	                        swap(L[j],L[j-1]);
+	                }
+		 时间复杂度：O(n^2);
+
+- 简单选择排序
+
+		for(i=1;i<length;i++)
+		min=i;
+		for(j=i+1;j<length-1;j++)
+		   {
+		        if(L[j]<L[min])
+		             min=j;
+		   }
+		if(i!=min)
+		   swap(i,min);
+		时间复杂度：O(n^2);性能上优于冒泡排序；
+
+- 插入排序
+		直接插入排序
+	 
+		void insertvalue(L[])
+		{
+		     for(i=1;i<length;i++)
+		     {
+		          int invar=L[i];
+		          int index=i-1
+		          while(index>=0&&L[index]>invar)
+		          {
+		`               L[index+1]=L[index];
+		                 index--;
+		          }
+		          L[index+1]=invar;
+		     }
+		}
+		时间复杂度：O(n^2/4)
+
+- 希尔排序
+
+		void shellSort(int []array)
+		{
+		     int length=sizeof(array);//n为待排序序列的长度
+		     int increment=length;
+		      while(increment>1)
+		     {
+		           increment=increment/3+1;
+		          for(int i=increment;i<=length-1;i++)
+		          {
+		               if(array[i]<array[i-increment])
+		               {
+		                    int temp=array[i];
+		                    for(j=i-increment;j>0&&temp<array[j];j-=increment)
+		                         array[j+increment]=array[j];
+		                    array[j]=temp;
+		               }
+		          }
+		     }
+		}
+
+
+- 归并排序：
+
+时间复杂度：O(nlogn) 空间复杂度：O(n+logn)
+
+- 快速排序算法：
+
+		void QuickSort(int left, int right, int arr[])
+		{
+		     int l=left;
+		     int r=right;
+		     int mid=(l+r)/2;
+		     int pivot=array[middle];
+		     int temp=0;
+		          whlie(l<r) 
+		          {
+		               while(arr[l]<pivot)  l++;
+		               while(arr[r]>pivot) r--;
+		               temp=arr[r];
+		               arr[r]=arr[l];
+		               arr[l]=temp;
+		               if(l>=r)  break;
+		               if (pivot==arr[r])  l++;
+		               if (pivot==arr[l])   r--;
+		               
+		          }
+		          if(l==r)
+		          {
+		               l++;
+		               r--;
+		          }
+		          if(left<r) QuickSort(left,r,array);
+		          if(right>l) QuickSort(l,right,array);
+		}
+
+
+7、堆排序
+
+堆排序（简单选择排序的升级）
+堆：每个节点的值大于或等于其左右孩子节点的值，为大顶堆，。。。小顶堆。
+
+时间复杂度O(nlogn)  空间复杂度：只需一个用来交换的暂存单元。由于记录的比较和交换式跳跃式进行，因此堆排序也是一种不稳定的排序方法。
 
