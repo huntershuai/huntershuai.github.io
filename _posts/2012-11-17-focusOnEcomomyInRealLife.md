@@ -1,7 +1,7 @@
 ---
 layout: posts
 title: 聚焦生活中的经济学
-author:huntershuai
+author: huntershuai
 ---
 
 聚焦生活中的经济学
