@@ -55,6 +55,8 @@ In `port.c`
 
 **Task control block**
 
+Task control block is the basic unit of Task, it describes the main attributes of one Task.
+
 	typedef struct tskTaskControlBlock
 	{
 	  volatile portSTACK_TYPE *pxTopOfStack;                  /* Points to the location of
@@ -93,4 +95,134 @@ In `port.c`
 	  #endif
 	
 	} tskTCB;
+
+- pxTopOfStack:top address of task stack
+- pxStack:start address of task stack
+- uxPriority&uxBasePriority: priority index
+- xGenericListItem & xEventListItem: smarter the pointer when operated among lists.
+
+Task is created by using `xTaskCreate()` function,  the basic Task attributes are stored in the newly allocated TCB(memory), and a stack is created to store the task switch register value.
+here is  ARM Cortex-M0:
+	
+	ARM Cortex-M0:
+	StackType_t *pxPortInitialiseStack( StackType_t *pxTopOfStack, TaskFunction_t pxCode, void *pvParameters )
+	{
+		/* Simulate the stack frame as it would be created by a context switch
+		interrupt. */
+		pxTopOfStack--; /* Offset added to account for the way the MCU uses the stack on entry/exit of interrupts. */
+		*pxTopOfStack = portINITIAL_XPSR;	/* xPSR */
+		pxTopOfStack--;
+		*pxTopOfStack = ( StackType_t ) pxCode;	/* PC */
+		pxTopOfStack--;
+		*pxTopOfStack = ( StackType_t ) prvTaskExitError;	/* LR */
+		pxTopOfStack -= 5;	/* R12, R3, R2 and R1. */
+		*pxTopOfStack = ( StackType_t ) pvParameters;	/* R0 */
+		pxTopOfStack -= 8; /* R11..R4. */
+	
+		return pxTopOfStack;
+	}
+
+
+##List
+
+Meanwhile, the TCBs are organized as List,including Ready,Pending,Delayed List
+
+	/* Lists for ready and blocked tasks. --------------------*/
+	PRIVILEGED_DATA static List_t pxReadyTasksLists[ configMAX_PRIORITIES ];/*< Prioritised ready tasks. */
+	PRIVILEGED_DATA static List_t xDelayedTaskList1;						/*< Delayed tasks. */
+	PRIVILEGED_DATA static List_t xDelayedTaskList2;						/*< Delayed tasks (two lists are used - one for delays that have overflowed the current tick count. */
+	PRIVILEGED_DATA static List_t * volatile pxDelayedTaskList;				/*< Points to the delayed task list currently being used. */
+	PRIVILEGED_DATA static List_t * volatile pxOverflowDelayedTaskList;		/*< Points to the delayed task list currently being used to hold tasks that have overflowed the current tick count. */
+	PRIVILEGED_DATA static List_t xPendingReadyList;						/*< Tasks that have been readied while the scheduler was suspended.  They will be moved to the ready list when the scheduler is resumed. */
+
+
+`pxReadyTasksLists[ configMAX_PRIORITIES ]`is a list array,Tasks with the same priority share
+the common index in the array.
+
+
+<img src="/images/freertos_learning/basic_ready_list.png" alt="ready list"/>
+
+The listItem structure is as following :
+
+	struct xLIST_ITEM
+	{
+	  portTickType xItemValue;                   /* The value being listed.  In most cases
+	                                                this is used to sort the list in 
+	                                                descending order. */
+	  volatile struct xLIST_ITEM * pxNext;       /* Pointer to the next xListItem in the 
+	                                                list.  */
+	  volatile struct xLIST_ITEM * pxPrevious;   /* Pointer to the previous xListItem in 
+	                                                the list. */
+	  void * pvOwner;                            /* Pointer to the object (normally a TCB)
+	                                                that contains the list item.  There is
+	                                                therefore a two-way link between the 
+	                                                object containing the list item and 
+	                                                the list item itself. */
+	  void * pvContainer;                        /* Pointer to the list in which this list
+	                                                item is placed (if any). */
+	};
+
+and list structure:
+
+	typedef struct xLIST
+	{
+	  volatile unsigned portBASE_TYPE uxNumberOfItems;
+	  volatile xListItem * pxIndex;           /* Used to walk through the list.  Points to
+	                                             the last item returned by a call to 
+	                                             pvListGetOwnerOfNextEntry (). */
+	  volatile xMiniListItem xListEnd;        /* List item that contains the maximum 
+	                                             possible item value, meaning it is always
+	                                             at the end of the list and is therefore 
+	                                             used as a marker. */
+	} xList;
+
+the listItem in the list are sorted in high to low sequence, which means the first item is the `xListend` with the highes value(0xFFFF or 0xffffffff), plays the role of list marker.
+
+
+
+<img src="/images/freertos_learning/ready_list_full.png" alt="ready list full"/>
+
+
+
+
+
+
+##Queue
+Queue structure:
+
+	typedef struct QueueDefinition
+	{
+	  signed char *pcHead;                      /* Points to the beginning of the queue 
+	                                               storage area. */
+	  signed char *pcTail;                      /* Points to the byte at the end of the 
+	                                               queue storage area. One more byte is 
+	                                               allocated than necessary to store the 
+	                                             queue items; this is used as a marker. */
+	  signed char *pcWriteTo;                   /* Points to the free next place in the 
+	                                               storage area. */
+	  signed char *pcReadFrom;                  /* Points to the last place that a queued 
+	                                               item was read from. */
+	                                           
+	  xList xTasksWaitingToSend;                /* List of tasks that are blocked waiting 
+	                                               to post onto this queue.  Stored in 
+	                                               priority order. */
+	  xList xTasksWaitingToReceive;             /* List of tasks that are blocked waiting 
+	                                               to read from this queue. Stored in 
+	                                               priority order. */
+	
+	  volatile unsigned portBASE_TYPE uxMessagesWaiting;  /* The number of items currently
+	                                                         in the queue. */
+	  unsigned portBASE_TYPE uxLength;                    /* The length of the queue 
+	                                                         defined as the number of 
+	                                                         items it will hold, not the 
+	                                                         number of bytes. */
+	  unsigned portBASE_TYPE uxItemSize;                  /* The size of each items that 
+	                                                         the queue will hold. */
+	                                         
+	} xQUEUE;
+
+
+
+
+
 
