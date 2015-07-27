@@ -1,11 +1,11 @@
 ---
-title: IOS Learning 
+title: iOS journey 
 layout: posts
 author: huntershuai
 ---
 
 
-IOS learning 
+iOS journey 
 ========
 This is a collection of ios learning experience and knowleadge, and will be updated in the coming days.
 2015.06.17 @ suzhou
