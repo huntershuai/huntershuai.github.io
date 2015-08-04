@@ -241,4 +241,13 @@ i386下系统调用中断号：
 <img src="/images/compile_link_lib/linux_int_process.png"/>  
 
 
+<img src="/images/compile_link_lib/linux_int_call.png"/>  
+
+linux在不同模式下进行切换的同时，要对栈也进行同步切换，即从用户模式到内核模式时，要保存当前用户模式的栈参数。
+- 切换到当前进程的内核栈（每一个进程都有自己的内核栈）
+- 保存用户模式的寄存器至内核栈中
+
+<img src="/images/compile_link_lib/stack_store.png"/>  
+
+
 
