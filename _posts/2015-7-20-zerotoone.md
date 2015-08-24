@@ -11,7 +11,7 @@ How to build the future
 
 Tag: startup
 
-<a href="http://book.douban.com/subject/24845389/">
+<a href="http://book.douban.com/subject/24753651/">
 <img src="/images/zerotoone/front_page.jpg" alt="front page"/>
 </a>
 
