@@ -34,4 +34,30 @@ The ARM Cortex Microcontroller Software Interface Standard (CMSIS) is a vendor-i
 * CMSIS-DAP: A USB to Debug Access Port protocol and reference firmware implementation. Can be used by pyOCD.
 
 
-##
+##ARM Cortex-M3
+Here, take M3 as an example to show the detail info about ARM series.
+
+###Special Register
+- Program Status Registers (PSRs or xPSR)
+- Interrupt Mask Registers (PRIMASK, FAULTMASK, and BASEPRI)
+- Control Register (Control)
+
+use MSR & MRS to access Special Register(only at privilege):
+	
+	MRS   <reg>, <special_reg>; Read special register
+    MSR   <special_reg>, <reg>; write to special register
+
+
+其实，为了快速地开关中断，CM3还专门设置了一条CPS指令，有4种用法 
+   
+	CPSID I  ;PRIMASK=1，  ;关中断 
+  	CPSIE I  ;PRIMASK=0，  ;开中断 
+  	CPSID F  ;FAULTMASK=1, ;关异常 
+  	CPSIE F  ;FAULTMASK=0  ;开异常 
+
+control register:
+	
+	CONTROL[0]: 0, privilege; 1, user
+	CONTROL[1]: 0, MSP;       1, PSP
+
+
