@@ -162,7 +162,7 @@ ul.posts span
 	padding-right: 10%;
 	width: 60%;
 	font-family: Arial,"楷体",KaiTi,Times,TimesNR,'New Century Schoolbook',Georgia,'New York',serif;
-	font-size: 1.2em;
+	font-size: 1em;
 }
 
 #page #related
@@ -184,7 +184,6 @@ ul.posts span
 {
 	font-size: 200%;
 	font-family: serif;
-//	text-align: left ;
 	font-size: 110%;
 }	
  
