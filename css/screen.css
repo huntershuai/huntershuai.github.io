@@ -160,9 +160,8 @@ ul.posts span
 	margin: 3px 2px auto 2px;
 	padding-left: 10%;
 	padding-right: 10%;
-	width: 60%;
-	font-family: Arial,"楷体",KaiTi,Times,TimesNR,'New Century Schoolbook',Georgia,'New York',serif;
-	font-size: 1.2em;
+	font-family: Heiti SC,Hiragino Sans GB,Times,TimesNR,'New Century Schoolbook',Georgia,'New York',serif;
+	font-size: 1em;
 }
 
 #page #related
@@ -184,7 +183,6 @@ ul.posts span
 {
 	font-size: 200%;
 	font-family: serif;
-//	text-align: left ;
 	font-size: 110%;
 }	
  
@@ -205,10 +203,10 @@ ul.posts span
 
 #page div.content code 
 {
-	border: 1px solid #ddd;
-	background-color:#eef;	/*#eef*/;
+	/*border: 1px solid #ddd;*/
+	background-color: #eef;	/*#eef*/;
 	font-size: 85%;
-	font-style: 'Courier New';
+	/*font-style: 'Courier New';*/
 	padding: 0 .2em;
 }
 
