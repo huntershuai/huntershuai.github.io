@@ -1,4 +1,4 @@
----
+--
 layout: posts
 title: 民主的细节
 author： huntershuai
