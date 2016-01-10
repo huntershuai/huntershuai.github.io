@@ -203,10 +203,10 @@ ul.posts span
 
 #page div.content code 
 {
-	border: 1px solid #ddd;
-	background-color: gray    /*//#eef*/;	/*#eef*/;
+	/*border: 1px solid #ddd;*/
+	background-color: #eef;	/*#eef*/;
 	font-size: 85%;
-	font-style: 'Courier New';
+	/*font-style: 'Courier New';*/
 	padding: 0 .2em;
 }
 
