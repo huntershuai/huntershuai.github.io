@@ -1,7 +1,15 @@
+---
+title: Linux Kernel Development
+layout: posts
+author: huntershuai
+---
+
 Linux 内核设计与实现
 ===
 Linux Kernel Development
 ---
+Tag：linux
+
 Author: Robert Love
 
 command:
