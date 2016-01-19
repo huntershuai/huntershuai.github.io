@@ -5,6 +5,7 @@ Linux Kernel Development
 Author: Robert Love
 
 command:
+
 - ps-el ：查看系统中的进程列表
 - ps -eo state,uid, pid, ppid, rtprio, time, comm
 
