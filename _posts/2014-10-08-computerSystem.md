@@ -36,6 +36,15 @@ Part 3:程序件的交互和通信
 
 
 ## virtual memory management
+### 垃圾回收，碎片管理
+
+- 内部碎片：
+
+
+
+
+
+
 
 
 
