@@ -1,7 +1,8 @@
 ---
 layout: posts
 title: Leetcode Journey
-author:huntershuai
+author: huntershuai
+
 ---
 
 Leetcode Journey

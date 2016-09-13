@@ -1,32 +1,25 @@
-<!DOCTYPE html>
-　　<html>
-　　<head id="page_head">
-	　<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	  <link rel="stylesheet" href="/css/screen.css" type="text/css"></link>	
-　　　<title>{{ page.title }}</title>
-　　</head>
-　　<body id="page">
-		<div class="title"> 
-		    <a href="/">Home</a>
-		</div>
-		<div class="content">
-		　　　{{ content }}
-		</div>
-		<div id="related">
-			<h2>Related Posts</h2>
-			<ul class="posts">
-				{% for post in site.related_posts limit:3 %}
-				<li>
-				<span>
-					{{ post.date | date_to_string }}
-				</span> &raquo; 
-				<a href="{{post.url}}">{{ post.title }}</a>
-				</li>
-				{% endfor %}
-			</ul>
-		</div>	
-　　</body>
-　　</html>
+---
+layout: default
+---
 
+<div class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <span class="post-date">{{ page.date | date_to_string }}</span>
+  {{ content }}
+</div>
 
-
+<div class="related">
+  <h2>Related Posts</h2>
+  <ul class="related-posts">
+    {% for post in site.related_posts limit:3 %}
+      <li>
+        <h3>
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            {{ post.title }}
+            <small>{{ post.date | date_to_string }}</small>
+          </a>
+        </h3>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

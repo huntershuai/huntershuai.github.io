@@ -1,7 +1,8 @@
 ---
 layout: posts
 title: 民主的细节
-author:huntershuai
+author: huntershuai
+
 ---
 
 民主的细节
