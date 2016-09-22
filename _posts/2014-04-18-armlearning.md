@@ -12,7 +12,7 @@ Nowadays, mobile phone is familiar tool for us, and meanwhile, the core of mobil
 
 ## ARM Family
 
-<img src="../images/arm_learning/arm_family.png"/>
+<img src="/images/arm_learning/arm_family.png"/>
 
 
 
@@ -39,7 +39,7 @@ Here, take M3 as an example to show the detail info about ARM series.
 
 ### Architecture
 
-<img src="../images/arm_learning/m3_arch.png"/>
+<img src="/images/arm_learning/m3_arch.png"/>
 
 
 
@@ -78,7 +78,7 @@ control register:
 
 ### Memeroy mapping
 
-<img src="../images/arm_learning/mem_map.png"/>
+<img src="/images/arm_learning/mem_map.png"/>
 
 
 
