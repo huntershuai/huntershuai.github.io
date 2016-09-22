@@ -12,7 +12,7 @@ Nowadays, mobile phone is familiar tool for us, and meanwhile, the core of mobil
 
 ## ARM Family
 
-<img src="/images/arm_learning/arm_evolution.jpg"/>
+<img src="../images/arm_learning/arm_family.png"/>
 
 
 
@@ -37,12 +37,19 @@ The ARM Cortex Microcontroller Software Interface Standard (CMSIS) is a vendor-i
 ## ARM Cortex-M3
 Here, take M3 as an example to show the detail info about ARM series.
 
+### Architecture
+
+<img src="../images/arm_learning/m3_arch.png"/>
+
+
+
 ### General Register
 
 General register including 16 register:
 R0~R15
 
 and R15 is also called PC , R14 is called LR, and R13 is SP(PSP or MSP)
+
 
 
 
@@ -69,8 +76,13 @@ control register:
 	CONTROL[0]: 0, privilege; 1, user
 	CONTROL[1]: 0, MSP;       1, PSP
 
+### Memeroy mapping
 
-### Bit Band Operation
+<img src="../images/arm_learning/mem_map.png"/>
+
+
+
+#### Bit Band Operation
 
 - 1MB map to 32MB region
 - Must word-align
@@ -100,7 +112,13 @@ output data to Port A
 		{
 			(*((u32*) 0x42400280)) = *pBuffer++;
 		}
+		
+**note**:
+
+- Bit band operation is not supported when use DMA to access SRAM(Bit band is realize through ARM kernel, so it is only available with CPU)
+- 
 ### Opreation Mode
+
 
 
 	
