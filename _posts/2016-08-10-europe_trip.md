@@ -13,9 +13,9 @@ Europe Trip
 
 
 
-##Day 1： 
+## Day 1： 
 
-###莱茵湖 
+### 莱茵湖 
 一湖碧水
 <img src="http://p1.bpimg.com/4851/87bd5ba8c44b8ffb.jpg">
 
@@ -23,11 +23,11 @@ Europe Trip
 <img src="http://p1.bpimg.com/4851/4a22466d27a7188e.jpg">
 
 
-###施泰因小镇
+### 施泰因小镇
 
 
-##Day 2：
-###西庸城堡 @蒙特勒
+## Day 2：
+### 西庸城堡 @蒙特勒
 
 早上从伯尔尼坐火车到蒙特勒，火车上看到莱芒湖，大自然的PS神技，恍若如梦
 <img src="http://p1.bpimg.com/4851/66ac7813b88139fa.jpg">
