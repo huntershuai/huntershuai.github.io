@@ -2,6 +2,9 @@
 layout: posts
 title:  ARM Change the world
 author: huntershuai
+tags:
+- Computer
+- ARM
 ---
 
 ARM Change the world
@@ -98,10 +101,13 @@ output data to Port A
 
 - not use bit band:
 	
-		for (u16 cnt=0; cnt<512; cnt++)					for (u8 num=0; num<8; num++) 
-				if ((Buffer[cnt]>>num)&0x01)		
+		for (u16 cnt=0; cnt<512; cnt++)
+		
+			for (u8 num=0; num<8; num++) 
+				if ((Buffer[cnt]>>num)&0x01)		
 					GPIOA->BSRR = 1;
-				else					GPIOA->BRR = 1;
+				else
+					GPIOA->BRR = 1;
 
 - use bit band:
 
@@ -117,9 +123,9 @@ output data to Port A
 
 - Bit band operation is not supported when use DMA to access SRAM(Bit band is realize through ARM kernel, so it is only available with CPU)
 - 
-### Opreation Mode
+### Opreation Mode
 
 
-
+
 	
 

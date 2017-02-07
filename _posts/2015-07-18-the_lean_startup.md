@@ -2,6 +2,9 @@
 layout: posts
 title: The Lean startup
 author: huntershuai
+tags:
+- Life
+- Startup
 ---
 
 The lean startup(精益创业) 

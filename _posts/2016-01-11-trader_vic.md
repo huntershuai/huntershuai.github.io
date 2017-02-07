@@ -2,6 +2,8 @@
 layout: posts
 title: 专业投机原理
 author: huntershuai
+tags:
+- Economy
 ---
 
 专业投机原理

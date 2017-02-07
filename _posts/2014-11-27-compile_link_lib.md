@@ -2,6 +2,8 @@
 layout: posts
 title: 程序员的自我修养 
 author: huntershuai
+tags:
+- Computer
 ---
 
 程序员的自我修养 

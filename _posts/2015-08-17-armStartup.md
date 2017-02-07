@@ -2,6 +2,8 @@
 layout: posts
 title: ARM Starup.s Analysis
 author: huntershuai 
+tags:
+- ARM
 ---
 
 ARM Starup.s Analysis

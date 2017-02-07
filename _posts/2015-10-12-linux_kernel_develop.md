@@ -2,6 +2,8 @@
 title: Linux Kernel Development
 layout: posts
 author: huntershuai
+tags:
+- OS
 ---
 
 Linux 内核设计与实现

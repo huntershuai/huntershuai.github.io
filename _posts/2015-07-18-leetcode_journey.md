@@ -2,6 +2,8 @@
 layout: posts
 title: Leetcode Journey
 author: huntershuai
+tags:
+- Algorithm
 
 ---
 

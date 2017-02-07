@@ -1,6 +1,8 @@
 ---
 layout: posts
 title: 欧洲之旅
+tags:
+- Life
 ---
 Europe Trip
 ===========

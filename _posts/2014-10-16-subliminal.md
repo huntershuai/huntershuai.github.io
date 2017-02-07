@@ -2,6 +2,8 @@
 layout: posts
 title: 潜意识，控制你行为的秘密
 author: huntershuai
+tags:
+- Psychology
 ---
 
 潜意识，控制你行为的秘密

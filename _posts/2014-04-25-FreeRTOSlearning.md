@@ -2,6 +2,8 @@
 layout: posts
 title: Have a close look at FreeRTOS
 author: huntershuai
+tags:
+- OS
 ---
 
 
