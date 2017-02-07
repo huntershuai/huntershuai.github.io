@@ -6,7 +6,9 @@ permalink: /tags/
 
 {% if site.posts != empty %} 
 {% for tag in site.tags %} 	
-<a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0]}}<span class="size">{{ tag[1].size }}</span></a>{% endfor %}
+<a href="{{ site.baseurl }}/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">{{ tag[0]}}
+<span class="size">{{ tag[1].size }}</span>
+</a>{% endfor %}
 
 {% for tag in site.tags %}
 
