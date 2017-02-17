@@ -10,7 +10,8 @@ tags:
 FreeRTOS learning 
 ===
 
-##Framework
+## Framework
+
 Including：
 task、communication（queue）、hardware whisperer（port)
 task.c、port.c、queue.c
@@ -125,7 +126,7 @@ here is  ARM Cortex-M0:
 	}
 
 
-##List
+## List
 
 Meanwhile, the TCBs are organized as List,including Ready,Pending,Delayed List
 
@@ -189,7 +190,8 @@ the listItem in the list are sorted in high to low sequence, which means the fir
 
 
 
-##Queue
+## Queue
+
 Queue structure:
 
 	typedef struct QueueDefinition
@@ -224,7 +226,8 @@ Queue structure:
 	} xQUEUE;
 
 
-##Task Scheduling Process
+## Task Scheduling Process
+
 **Note:**Task Block and Task stack can be locate in non-continuous memory.
 <img src="/images/freertos_learning/task_stack.png" alt="task_stack"/>
 

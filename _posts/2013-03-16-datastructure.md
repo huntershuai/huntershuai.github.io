@@ -11,7 +11,8 @@ tags:
 
 @home 
 
-##chapter 01
+## chapter 01
+
 首先是一些基本概念：
 
 * 数据：计算机操作的对象
@@ -42,7 +43,8 @@ tags:
 * 顺序存储
 * 链式存储 
 
-##chapter 02: Alogrithm
+## chapter 02: Alogrithm
+
 推导大O阶：（时间复杂度）
 
 1. 用常数1取代运行时间中的所有加法常数
@@ -55,11 +57,11 @@ tags:
 
 >O(1)<O(logn)<O(nlogn)<O(n^2)<O(n^3)<O(2^n)<O(n!)<O(n^n)
 
-##chapter 03 线性表
+## chapter 03 线性表
 
 
 
-###  顺序存储结构：数组实现
+### 顺序存储结构：数组实现
 
 时间复杂度：O(n)
 
@@ -75,7 +77,7 @@ tags:
      }sqList;
 
 
-###链式存储结构
+### 链式存储结构
 
 结点（node）: value & pointer
 
@@ -150,7 +152,7 @@ free(p);
      }node, 
      两个指针域，指向前一个结点和后一个结点。
 
-##chapter 04 stack & queue
+## chapter 04 stack & queue
 
      栈的数据顺序存储结构
      typedef struct
@@ -167,7 +169,7 @@ free(p);
           int top2;
      }sqDoubleStack;
 
-###stack
+### stack
 
 不存在线性表的插入和删除问题，缺陷是必须实现确定数组存储空间的额大小。
 
@@ -198,7 +200,7 @@ free(p);
 	[百科](http://baike.baidu.com/link?	url=C89qXxFjYPGbz73XP4qj5VcXOhdxA4uFgnheEaC2xv5gZnjtvXb8aC_QxkiQakGJaZsIaPxppIrP2fcH7LPCFq)
 >不包含括号，运算符放在两个运算对象的后面，所有的计算按运算符出现的顺序，严格从左向右进行（不再考虑运算符的优先规则，如：(2 + 1) * 3 ， 即2 1 + 3 *
 
-###queue
+### queue
 
 插入在队尾，删除在队头
 
@@ -251,7 +253,7 @@ free(p);
 	就是线性表的单链表，只能尾进头出。
 
 
-##chapter 05 string 
+## chapter 05 string 
 
 串是由0个或多个字符组成的有限序列，即字符串
 
@@ -264,7 +266,7 @@ unicode 16位二进制   ASCII 8位二进制
 串最后“\0”不计入串长度
 
 
-###KMP 朴素匹配算法
+### KMP 朴素匹配算法
 
 ![kmp](/images/data_structure/kmp.png )
 
@@ -291,7 +293,7 @@ unicode 16位二进制   ASCII 8位二进制
 	}
 
 
-##chapter 06 Tree
+## chapter 06 Tree
 
 Definiton:
 
@@ -308,7 +310,8 @@ m(m>0)个互不相交的有限集。
 * 树中结点的各子树看成是从左至右是有次序的，不能互换的，则为有序树。
 
 
-###树的存储结构
+### 树的存储结构
+
 - 双亲表示法：
 
    双亲域，长子域
@@ -447,7 +450,7 @@ m(m>0)个互不相交的有限集。
 	树的路径长度就是从树根到每一结点的路径长度之和
 
 
-##查找
+## 查找
 
 >关键字（key）是数据元素的某个数据项的值，若能唯一的标识一个记录，则称为主关键字（primary key）
      查找就是根据某个值，在查找表中确定一个其关键字等于给定值的数据元素（或记录）
@@ -528,7 +531,7 @@ __平衡二叉树__
 	4.公共溢出区法：
 
 
-##排序
+## 排序
 
 __排序的稳定性__
 

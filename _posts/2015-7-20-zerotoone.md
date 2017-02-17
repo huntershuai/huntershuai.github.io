@@ -11,7 +11,7 @@ Zero to One
 How to build the future
 ---
 
-Tag: startup
+
 
 <a href="http://book.douban.com/subject/24753651/">
 <img src="/images/zerotoone/front_page.jpg" alt="front page"/>
@@ -24,10 +24,12 @@ Tag: startup
 
 书的内容无外乎创业的指导，与其他创业精神导师并无大异，换了种说法而已，但是其中的一些概念以及分析方法是在其他类似书中没有见到的，在这里进行总结与记录。
 
-##preface
+## preface
+
 this book stems from a course about startups that i taught at stanford in 2012...
 
-##party like it's 1999
+## party like it's 1999
+
 lessons from dot-com crash:
 
 - make incremental advances
@@ -48,7 +50,7 @@ priciples:
 - competitive markets detroy profit
 - sales matters just as much as product
 
-##all happy company are different
+## all happy company are different
 
 > if the tendency of monoply business were to hold back progress , they would be dangerous and we'd be right to oppose them, but the history of progress is a history of progress is a history of better monopoly business replacing incumbents
 
@@ -60,7 +62,7 @@ priciples:
  
  
  
- ##you are not a lottery ticket
+ ## you are not a lottery ticket
 
 
 

@@ -12,8 +12,10 @@ git 学习笔记
 使用git有一段时间了，之间总是有一些command很容易忽视和忘记，这里，通过这份笔记，将一些command纪录下来，同时顺便进一步学习下git的使用原理。
 
 
-##git 文件管理
-###忽略文件
+## git 文件管理
+
+### 忽略文件
+
 通过创建.gitignore 文件，列出需要忽略的文件
 
 cat .gitignore
@@ -37,6 +39,7 @@ cat .gitignore
 	git rm --cached filename
 		
 ## branch
+
 创建一个新branch
 
 	git branch branchName 

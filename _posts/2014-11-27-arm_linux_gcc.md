@@ -12,7 +12,7 @@ ARM GCC
 
 Tag: embeded
 
-###Source for download
+### Source for download
 
 <a href="https://launchpad.net/gcc-arm-embedded">https://launchpad.net/gcc-arm-embedded</a>
 
@@ -21,7 +21,8 @@ Tag: embeded
 <a href="http://www.arm9.net/download.asp/">http://www.arm9.net/download.asp </a>
 
 
-###工具安装
+### 工具安装
+
 这里选择图形化配置工具Ncurses：
 
 Ubuntu Ncurses安装 （make menuconfig）：
@@ -30,7 +31,8 @@ Ubuntu Ncurses安装 （make menuconfig）：
 /">http://www.linuxidc.com/Linux/2012-04/58746.htm
  </a>
 
-###arm-elf和arm-eabi的区别
+### arm-elf和arm-eabi的区别
+
 arm编译器在gcc的一些概念
 
 binutils+gcc+glibc = arm-linux-gcc 在以arm为处理器的linux系统
