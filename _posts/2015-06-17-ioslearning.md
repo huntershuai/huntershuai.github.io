@@ -2,6 +2,8 @@
 title: iOS journey 
 layout: posts
 author: huntershuai
+tags:
+- Mobile
 ---
 
 

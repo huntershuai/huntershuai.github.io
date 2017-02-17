@@ -2,6 +2,8 @@
 layout: posts
 title: Have a close look at FreeRTOS
 author: huntershuai
+tags:
+- OS
 ---
 
 
@@ -319,3 +321,5 @@ task switch process happened in pendsv handler, first restore task1 stack, and s
 		bx r3
 		ALIGN
 	}
+
+

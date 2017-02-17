@@ -265,6 +265,15 @@ tbody tr:nth-child(odd) th {
 
 
 /*
+* tags and catorgories
+**/
+
+.size{
+  font-size: 0.7em; font-weight: bold; vertical-align: super;
+}
+
+
+/*
  * Messages
  *
  * Show alert messages to users. You may add it to single elements like a `<p>`,

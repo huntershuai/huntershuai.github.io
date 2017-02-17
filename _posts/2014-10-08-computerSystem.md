@@ -1,6 +1,8 @@
 深入理解计算机系统
 ===
 computer system, a programmer's perspective
+tags:
+- Computer
 ---
 一直在找这样一本书，而它，就是我想要的。
 

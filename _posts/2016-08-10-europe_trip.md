@@ -1,6 +1,8 @@
 ---
 layout: posts
 title: 欧洲之旅
+tags:
+- Life
 ---
 Europe Trip
 ===========
@@ -44,6 +46,12 @@ Europe Trip
 
 澡盆子
 <img src="http://i1.piimg.com/4851/9bbce836525e98dc.jpg">
+
+
+
+
+
+
 
 
 

@@ -2,6 +2,9 @@
 title: 数据结构
 layout: posts
 author: huntershuai
+tags:
+- Data Struct
+- Computer
 ---
 
 《大话数据结构》，一本介绍常用数据结构的工具书，在毕业找工作时，一些容易遗忘的数据结构，通常随手在这本书中找到答案，并很快回忆起书中相关的代码实现方法，在笔试时起到了不小的作用。今天，重新整理下之前的笔记。
@@ -412,7 +415,6 @@ m(m>0)个互不相交的有限集。
 	}	
 
 层序遍历：根节点开始，从左到右访问
-
 <img src="/images/data_structure/floor_traversal.png" alt="floor_traversal"/>
 
 
@@ -483,7 +485,9 @@ __平衡二叉树__
 是一种二叉排序树，每一个结点的左子树和右子树的高度差至多等于1.  用途，构建开销相对较小的二叉排序树。
 平衡因子：左子树深度减去右子树深度。
 
+{% comment %}
 <img src="/images/data_structure/balance_tree.png" width="300"/>
+{% endcomment%}
 
 距离插入结点最近，切平衡因子（BF）的绝对值大于1的结点为根的子树，称为“最小不平衡树”
 

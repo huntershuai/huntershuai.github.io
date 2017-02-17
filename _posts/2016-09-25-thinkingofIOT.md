@@ -4,6 +4,8 @@ layout: posts
 author: huntershuai
 
 title: 关于IOT 未来的一些思考
+tags:
+- Life
 ---
 
 关于IOT 未来的一些思考

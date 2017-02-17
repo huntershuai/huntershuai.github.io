@@ -2,6 +2,9 @@
 title: git learning 
 layout: posts
 author: huntershuai
+tags:
+- Git
+- Computer
 ---
 
 git 学习笔记

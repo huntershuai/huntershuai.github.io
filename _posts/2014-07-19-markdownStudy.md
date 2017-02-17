@@ -1,6 +1,8 @@
 ---
 layout: posts
 title: markdown study
+tags:
+- Tool
 ---
 markdown学习
 =============

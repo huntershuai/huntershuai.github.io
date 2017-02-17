@@ -2,6 +2,8 @@
 title: Zero to One
 layout: posts
 author: huntershuai
+tags:
+- Startup
 ---
 
 Zero to One

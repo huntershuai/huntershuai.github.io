@@ -2,6 +2,8 @@
 layout: posts
 title:  ARM Gcc
 author: huntershuai
+tags:
+- ARM
 ---
 
 
