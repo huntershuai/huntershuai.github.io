@@ -40,6 +40,8 @@ cat .gitignore
 		
 ## branch
 
+
+
 创建一个新branch
 
 	git branch branchName 
@@ -68,9 +70,20 @@ merge branch into master
 		git branch －d branchName
 	
 	
+**注**：
+[Git详解之三 Git分支](http://www.open-open.com/lib/view/open1328069889514.html)中详细说明了branch的原理和流程，讲解透彻
 	
 	
+
+## 附： Git 和 SVN 的主要区别
+
+
+- Git 是分布式的，SVN 不是：
+- Git 对内容的存储单元是元数据，而SVN的存储单元是文件，因此对文件的操作上，最小的操作单元也就不同
+- Git 维护一个本地的版本库，而SVN必须联网
+- Git 的分支和SVN 不同，
 	
-	
-	
+
+## 参考
+1. [git 官网](https://git-scm.com)
 	
