@@ -3,7 +3,7 @@ layout: posts
 title: 聚焦生活中的经济学
 author: huntershuai
 tags: 
-- Ecnomy
+- Economy
 comments: true
 ---
 
