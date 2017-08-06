@@ -13,7 +13,7 @@ This is a collection of ios learning experience and knowleadge, and will be upda
 2015.06.17 @ suzhou
 
 
-###ios framework
+### ios framework
 1.core os
 
 - osx kernel, 
@@ -74,7 +74,7 @@ This is a collection of ios learning experience and knowleadge, and will be upda
 - (add more later ...)
 
 
-###MVC
+### MVC
 model view controller
 
 <img src="/images/ios/mvc.png" width=500 alt="mvc introduction" ></img>
@@ -83,7 +83,7 @@ model view controller
 
 
 
-###objective c
+### objective c
 `@property(strong/weak,nonautomic)`
 
 __strong__:release memory until all reference pointer set to nil or change to other object.
@@ -127,7 +127,7 @@ there is an example:
  
 
 
-###xcode 
+### xcode 
 Add this phase to list some problem when using xcode as part of ios learning.
 
 1.

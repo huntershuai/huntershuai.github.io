@@ -33,11 +33,15 @@ Tag: computer system
 
 5. ar -t xx.a   查看库文件信息
 
+<<<<<<< HEAD
+### Computer System
+=======
 
 
 
 ### Computer System
 
+>>>>>>> db4a25e35feb1070c4ba752dbaf0109d81dcceca
 <img src="/images/compile_link_lib/hardware_framework.png" width="400"/>
 
 - 南桥(ISA):low speed bus
@@ -49,7 +53,7 @@ Tag: computer system
 
 
 #### 线程调度与优先级
-
+<<<<<<< HEAD
 <img src="/images/compile_link_lib/thread_transition.png" width="400"/>  
 
 
@@ -87,7 +91,14 @@ linux下线程创建：
 
 
 ### 内存空间
+=======
 
+<img src="/images/compile_link_lib/thread_transition.png" width="400"/>  
+
+
+### 内存空间
+
+>>>>>>> db4a25e35feb1070c4ba752dbaf0109d81dcceca
 linux 内存空间布局：
 <img src="/images/compile_link_lib/linux_memory.png" width="400"/>  
 - 栈
@@ -95,6 +106,7 @@ linux 内存空间布局：
 - 可执行映像文件
 - 保留区
 
+<<<<<<< HEAD
 
 引入内存映射的考虑：
 
@@ -107,7 +119,10 @@ linux 内存空间布局：
 
 
 #### 栈
+=======
+#### 栈
 
+>>>>>>> db4a25e35feb1070c4ba752dbaf0109d81dcceca
 - 返回地址
 - 临时变量
 - 上下文
@@ -148,14 +163,20 @@ linux 内存空间布局：
 **note**：单个字节的返回值存储在`eax`寄存器中。
 
 #### 堆
+<<<<<<< HEAD
+=======
 
+>>>>>>> db4a25e35feb1070c4ba752dbaf0109d81dcceca
 堆空间频繁采用系统调用--低效
 
 系统调用申请大块内存，由程序进行管理分配，提高效率--高效
 
 
 ##### linux 进程堆管理
+<<<<<<< HEAD
+=======
 
+>>>>>>> db4a25e35feb1070c4ba752dbaf0109d81dcceca
 两种堆空间分配方式：
 
 - int brk（void *end_data_segment）
@@ -222,7 +243,10 @@ BlockNumber=HeapSize/BlockSize=8K
 - \__为了减少内存碎片，缩小块的大小，这时会造成位图数组很大，削弱速度快的优势（ps：可采用多级位图）\__
 
 ###### 对象池
+<<<<<<< HEAD
+=======
 
+>>>>>>> db4a25e35feb1070c4ba752dbaf0109d81dcceca
 核心思想：
 假定每次申请的heap size一定，简化对象池中heap分配的过程
 
@@ -230,7 +254,10 @@ BlockNumber=HeapSize/BlockSize=8K
 
 
 ### 运行库
+<<<<<<< HEAD
+=======
 
+>>>>>>> db4a25e35feb1070c4ba752dbaf0109d81dcceca
 一个典型的程序运行大致步骤：
 
 1. 操作系统创建进程，控制权交给程序入口（运行库中的某个函数）
@@ -241,12 +268,18 @@ BlockNumber=HeapSize/BlockSize=8K
 __note__:在嵌入式中，第一步操作系统的工作由Arm或51的内核完成，同时不创建进程。
 
 #### glibc入口函数
+<<<<<<< HEAD
+=======
 
+>>>>>>> db4a25e35feb1070c4ba752dbaf0109d81dcceca
 
 
 
 #### c运行库（CRT）
+<<<<<<< HEAD
+=======
 
+>>>>>>> db4a25e35feb1070c4ba752dbaf0109d81dcceca
 c运行库的功能:
 
 1. 启动与退出（入口函数及其依赖函数）
@@ -281,7 +314,10 @@ Linux下的系统调用接口：
 __系统调用的缺陷：__增加移植的困难，削弱兼容性
 
 ##### 系统调用原理
+<<<<<<< HEAD
+=======
 
+>>>>>>> db4a25e35feb1070c4ba752dbaf0109d81dcceca
 
 计算机系统一般分为两种模式：内核模式（特权模式），用户模式
 两种模式间的切换：
@@ -307,7 +343,10 @@ linux在不同模式下进行切换的同时，要对栈也进行同步切换，
 <img src="/images/compile_link_lib/stack_store.png"/>  
 
 ### 编译
+<<<<<<< HEAD
+=======
 
+>>>>>>> db4a25e35feb1070c4ba752dbaf0109d81dcceca
 编译过程在整个生成可执行文件过程中的位置：
 .c文件－>(预处理)-> .i文件 ->（编译）－> .s文件－>(assemble 汇编)->.o ->(linker 链接)－>.out
 
@@ -351,7 +390,10 @@ linux在不同模式下进行切换的同时，要对栈也进行同步切换，
      .fint 段
 
 #### 链接不同编译器的目标文件
+<<<<<<< HEAD
+=======
 
+>>>>>>> db4a25e35feb1070c4ba752dbaf0109d81dcceca
 保证ABI相同（application binary interface）：
 
 1. 采用同样的目标文件格式；
@@ -362,12 +404,15 @@ linux在不同模式下进行切换的同时，要对栈也进行同步切换，
 - c++的结构复杂造成其生成的二进制代码在不同的编译器下会产生较c更大的差异，移植起来更加复杂和艰难。
 
 #### 动态链接，共享库
+<<<<<<< HEAD
 
 静态链接的缺点：
 
 - 相同模块重复占用内存空间
 - 相同模块重复占用磁盘空间：image文件
-
+- 
+=======
+>>>>>>> db4a25e35feb1070c4ba752dbaf0109d81dcceca
 
 
 
