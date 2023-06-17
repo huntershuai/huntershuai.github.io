@@ -111,8 +111,7 @@ tags:
 
 
 **静态链表**
-
-<img src="/images/data_structure/static_link_list.png"   />
+![static_link_list.png](https://img-blog.csdn.net/20180331225635301?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2h1bnRlcnNodWFp/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 	 静态链表的存储结构：     
      typedef struct
@@ -196,57 +195,59 @@ free(p);
 	**四则运算表达式求值**
 
 	后缀表达式（逆波兰法）可用于求解leetcode上关于简单字符串计算器问题
-
-	[百科](http://baike.baidu.com/link?	url=C89qXxFjYPGbz73XP4qj5VcXOhdxA4uFgnheEaC2xv5gZnjtvXb8aC_QxkiQakGJaZsIaPxppIrP2fcH7LPCFq)
 >不包含括号，运算符放在两个运算对象的后面，所有的计算按运算符出现的顺序，严格从左向右进行（不再考虑运算符的优先规则，如：(2 + 1) * 3 ， 即2 1 + 3 *
 
 ### queue
 
 插入在队尾，删除在队头
 
-
 - 循环队列：front队头指针，rear队尾指针 front=rear空队列
 
-	<img src="/images/data_structure/cycle_queue.png"  alt="cycle queue"/>
+![cycle queue](https://img-blog.csdn.net/20180331230103808?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2h1bnRlcnNodWFp/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+	
+为避免删除数据时整个队列移动，将front指针不指向数组0元素，这样带来了新的问题：当插入新元素时，rear指针可能在队列未溢出时指向数组外，造成假溢出。
+	
+注意：循环队列在判定队列满或空时需要两个条件：front=rear，和另外一个自设条件。
 
-	为避免删除数据时整个队列移动，将front指针不指向数组0元素，这样带来了新的问题：当插入新元素时，rear指针可能在队列未溢出时指向数组外，造成假溢出。
+循环队列的存储结构
+	
+```
+typedef struct
+{
+   		int data[maxsize];
+   		int front;
+   		int rear;
+}sqQueue;
+```
+	
+插入队列操作：
+```
+（rear-front+QueuseSize）%maxsize;//计算队列长度的计算公式
 
-	注意：循环队列在判定队列满或空时需要两个条件：front=rear，和另外一个自设条件。
+	void insert(int value, sqQueue q)
+	{
+    		if((q->rear+1)%maxsize==q->front)
+         		printf("error");
+    		else
+    		{
+         		q->data[rear]=value;
+         		q->rear=(q->rear+1)%maxsize;
+    		}
+	}
+```
 
-	循环队列的存储结构
+出队列操作：
 
-		typedef struct
-		{
-     		int data[maxsize];
-     		int front;
-     		int rear;
-		}sqQueue;
-
-	插入队列操作：
-
-	（rear-front+QueuseSize）%maxsize;//计算队列长度的计算公式
-
-		void insert(int value, sqQueue q)
-		{
-     		if((q->rear+1)%maxsize==q->front)
-          		printf("error");
-     		else
-     		{
-          		q->data[rear]=value;
-          		q->rear=(q->rear+1)%maxsize;
-     		}
-		}
-
-	出队列操作：
-
-		int out(sqQueue q)
-		{
-      		if((q->rear+1)%maxsize==q->front)
-          			printf("error");
-     		int e=q->data[front];
-     		q->front=(q->front+1)%maxsize;
-     		return e;
-		}
+```
+int out(sqQueue q)
+{
+    		if((q->rear+1)%maxsize==q->front)
+        			printf("error");
+   		int e=q->data[front];
+   		q->front=(q->front+1)%maxsize;
+   		return e;
+}
+```
 
 - 队列的链式存储结构及实现
 
@@ -260,18 +261,20 @@ free(p);
 unicode 16位二进制   ASCII 8位二进制
 字符串大小比较：
 
-     s="hap"<t="happy"
-     s="happen"<t="happy"  //从不同的地方比较ASCII码的大小  e<y;
-    
+```
+s="hap"<t="happy"
+s="happen"<t="happy"  //从不同的地方比较ASCII码的大小  e<y;
+```    
 串最后“\0”不计入串长度
 
 
 ### KMP 朴素匹配算法
 
-![kmp](/images/data_structure/kmp.png )
+![kmp](https://img-blog.csdn.net/20180331230442937?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2h1bnRlcnNodWFp/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+
 
 关键在于求next数组
-	
+```	
 	void get_next(String T, int *next)
 	{
 		int i,j;
@@ -291,7 +294,7 @@ unicode 16位二进制   ASCII 8位二进制
 			
 		}
 	}
-
+```
 
 ## chapter 06 Tree
 
@@ -301,13 +304,12 @@ n个结点的有限集，n=0时为空树，n>1，其余结点可分为
 m(m>0)个互不相交的有限集。
 
 **note**
-
 1. 数据结构中的树只能有一个根节点。
 2. m>0时，子树的个数没有限制，但一定是互不相交的。
 
-* 结点拥有的子树数为结点的度。树的度为结点中度的最大值
-* 树的深度（高度）：树的结点中最大层次
-* 树中结点的各子树看成是从左至右是有次序的，不能互换的，则为有序树。
+- 结点拥有的子树数为结点的度。树的度为结点中度的最大值
+- 树的深度（高度）：树的结点中最大层次
+- 树中结点的各子树看成是从左至右是有次序的，不能互换的，则为有序树。
 
 
 ### 树的存储结构
@@ -361,30 +363,31 @@ m(m>0)个互不相交的有限集。
 － 遍历二叉树
 
  前序：根结点，左子树，右子树
+![pre_traversal](https://img-blog.csdn.net/20180331230639110?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2h1bnRlcnNodWFp/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-<img src="/images/data_structure/pre_traversal.png" alt="pre_traversal"/>
+前序遍历算法：
+```
+void preOrderTraverse(node T)
+ {
+      if(T==null)
+      {
+           return;
+      }
+      else
+      {
+           printf("%c",T->data);
+           preOrderTraverse(T->lchild);
+           preOrderTraverse(T->rchild);
+      }
+ } 
+```
 
-	前序遍历算法：
-     void preOrderTraverse(node T)
-     {
-          if(T==null)
-          {
-               return;
-          }
-          else
-          {
-               printf("%c",T->data);
-               preOrderTraverse(T->lchild);
-               preOrderTraverse(T->rchild);
-          }
-     }
-     
-     
- 中序遍历   左子树-根结点-右子树
+中序遍历   左子树-根结点-右子树
+![middle_traversal](https://img-blog.csdn.net/2018033123080965?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2h1bnRlcnNodWFp/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-<img src="/images/data_structure/middle_traversal.png" alt="middle_traversal"/>
+中序遍历算法：
 
-	中序遍历算法：
+```
 	void inOrderTraverse（node T）
 	{
      	if(T==null)
@@ -398,13 +401,16 @@ m(m>0)个互不相交的有限集。
             inOrderTraverse(T->rchild);
      	}
 	}
-     
+```     
+
 后序遍历：从左到右先叶子节点后结点遍历左右子树，最后根节点。
 
-<img src="/images/data_structure/back_traversal.png" alt="back_traversal"/>
+![这里写图片描述](https://img-blog.csdn.net/20180331231035678?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2h1bnRlcnNodWFp/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+
 
 后续遍历算法：
 
+```
 	void backOrderTraverse（node T）
 	{
        if(T=Null)
@@ -416,34 +422,32 @@ m(m>0)个互不相交的有限集。
           printf("%c",T->value);
      	}
 	}	
+```
 
 层序遍历：根节点开始，从左到右访问
-<img src="/images/data_structure/floor_traversal.png" alt="floor_traversal"/>
 
+![这里写图片描述](https://img-blog.csdn.net/20180331231429437?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2h1bnRlcnNodWFp/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-－ 推导二叉树：
+- 推导二叉树：
 
    已知前序遍历和中序遍历序列，和已知后序遍历和中序遍历序列，可以唯一确定一棵二叉树.
-  
-－ 线索二叉树:
+
+- 线索二叉树:
      
    加上遍历方法线索的二叉链表称为线索链表.这样把一个二叉树变成了一个双向链表,
 
-－ 树，森林和二叉树的转换
+- 树，森林和二叉树的转换
+![tree_to_bin1](https://img-blog.csdn.net/20180331231545443?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2h1bnRlcnNodWFp/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-<img src="/images/data_structure/tree_to_bin1.png" width="300"/>
-
-<img src="/images/data_structure/tree_to_bin2.png" width="300"/>
+![这里写图片描述](https://img-blog.csdn.net/20180331231622355?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2h1bnRlcnNodWFp/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 
 森林转换成二叉树
+![这里写图片描述](https://img-blog.csdn.net/20180331231641804?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2h1bnRlcnNodWFp/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-<img src="/images/data_structure/forest_to_bin1.png" width="300"/>
+![这里写图片描述](https://img-blog.csdn.net/20180331231659306?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2h1bnRlcnNodWFp/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-<img src="/images/data_structure/forest_to_bin2.png" width="300"/>
-
-<img src="/images/data_structure/forest_to_bin3.png" width="300"/>
-
+![这里写图片描述](https://img-blog.csdn.net/20180331231711357?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2h1bnRlcnNodWFp/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 - 赫夫曼树及其应用
 
@@ -454,8 +458,6 @@ m(m>0)个互不相交的有限集。
 
 >关键字（key）是数据元素的某个数据项的值，若能唯一的标识一个记录，则称为主关键字（primary key）
      查找就是根据某个值，在查找表中确定一个其关键字等于给定值的数据元素（或记录）
-
-
 
  - 顺序查找：依次比对
  
@@ -488,14 +490,9 @@ __平衡二叉树__
 是一种二叉排序树，每一个结点的左子树和右子树的高度差至多等于1.  用途，构建开销相对较小的二叉排序树。
 平衡因子：左子树深度减去右子树深度。
 
-{% comment %}
-<img src="/images/data_structure/balance_tree.png" width="300"/>
-{% endcomment%}
-
 距离插入结点最近，切平衡因子（BF）的绝对值大于1的结点为根的子树，称为“最小不平衡树”
 
-<img src="/images/data_structure/min_non_banlance_tree.png" width="300"/>
-
+![这里写图片描述](https://img-blog.csdn.net/20180331231852288?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2h1bnRlcnNodWFp/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 不平衡树调整为平衡树：
 
@@ -646,12 +643,58 @@ __内排序与外排序__
 		          if(left<r) QuickSort(left,r,array);
 		          if(right>l) QuickSort(l,right,array);
 		}
+一种更易接受和理解的实现：
+```
+void sort(int *a, int left, int right)
+{
+    if(left >= right)/*如果左边索引大于或者等于右边的索引就代表已经整理完成一个组了*/
+    {
+        return ;
+    }
+    int i = left;
+    int j = right;
+    int key = a[left];
 
 
-7、堆排序
+    while(i < j)                              /*控制在当组内寻找一遍*/
+    {
+        while(i < j && key <= a[j])
+        /*而寻找结束的条件就是，1，找到一个小于或者大于key的数（大于或小于取决于你想升
+        序还是降序）2，没有符合条件1的，并且i与j的大小没有反转*/
+        {
+            j--;/*向前寻找*/
+        }
+
+
+        a[i] = a[j];
+        /*找到一个这样的数后就把它赋给前面的被拿走的i的值（如果第一次循环且key是
+        a[left]，那么就是给key）*/
+
+
+        while(i < j && key >= a[i])
+        /*这是i在当组内向前寻找，同上，不过注意与key的大小关系停止循环和上面相反，
+        因为排序思想是把数往两边扔，所以左右两边的数大小与key的关系相反*/
+        {
+            i++;
+        }
+
+
+        a[j] = a[i];
+    }
+
+
+    a[i] = key;/*当在当组内找完一遍以后就把中间数key回归*/
+    sort(a, left, i - 1);/*最后用同样的方式对分出来的左边的小组进行同上的做法*/
+    sort(a, i + 1, right);/*用同样的方式对分出来的右边的小组进行同上的做法*/
+                      /*当然最后可能会出现很多分左右，直到每一组的i = j 为止*/
+}
+```
+
+- 堆排序
 
 堆排序（简单选择排序的升级）
 堆：每个节点的值大于或等于其左右孩子节点的值，为大顶堆，。。。小顶堆。
 
 时间复杂度O(nlogn)  空间复杂度：只需一个用来交换的暂存单元。由于记录的比较和交换式跳跃式进行，因此堆排序也是一种不稳定的排序方法。
+
 
